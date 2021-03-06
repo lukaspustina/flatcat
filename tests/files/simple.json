@@ -1,0 +1,13 @@
+{
+    "persons": [
+        {
+            "age": 42,
+            "name": {
+                "family_name": "Pustina",
+                "first_name": "Lukas"
+            },
+            "phone": null,
+            "super_cool": true
+        }
+    ]
+}

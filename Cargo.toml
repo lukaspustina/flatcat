@@ -1,0 +1,30 @@
+[package]
+name = "flatcat"
+version = "0.0.1"
+authors = ["Lukas Pustina <lukas@pustina.de>"]
+edition = "2018"
+
+[[bin]]
+name = "fcat"
+path = "src/bin/fcat.rs"
+doc = false
+
+[lib]
+name = "flatcat"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "1.0"
+yansi = "0.5"
+
+[dev-dependencies]
+lit = "1"
+spectral = "0.6"
+
+[profile.release]
+lto = true
+overflow-checks = true
+panic = "abort"

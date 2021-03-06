@@ -1,0 +1,5939 @@
+{
+  "info": {
+    "start_time": "2021-03-06T20:03:40.769091Z",
+    "command_line": "-q -p -o json l --all pustina.de",
+    "version": "0.3.0"
+  },
+  "lookups": [
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 91888427
+          },
+          "valid_until": "2021-03-06T20:03:45.872438304Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 94901926
+          },
+          "valid_until": "2021-03-06T20:03:45.875748708Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 100532525
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 106032177
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 111251684
+          },
+          "valid_until": "2021-03-06T20:13:25.892179809Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 33404755
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 51709741
+          },
+          "valid_until": "2021-03-06T21:03:25.927499249Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 54666083
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 582,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 50064333
+          },
+          "valid_until": "2021-03-06T20:13:22.942251679Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 57353861
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2606:4700:4700::1111]:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 581,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 45182433
+          },
+          "valid_until": "2021-03-06T20:13:21.954348618Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 91717938
+          },
+          "valid_until": "2021-03-06T20:03:45.872335695Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 94192080
+          },
+          "valid_until": "2021-03-06T20:03:45.875037771Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 98452172
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 101940210
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 106690037
+          },
+          "valid_until": "2021-03-06T20:13:25.887615544Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52623163
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 53353664
+          },
+          "valid_until": "2021-03-06T21:03:25.928429266Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 51840379
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 583,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 52472457
+          },
+          "valid_until": "2021-03-06T20:13:23.940116Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52744123
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:1.0.0.1:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 585,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 38305271
+          },
+          "valid_until": "2021-03-06T20:13:25.966771219Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 93950374
+          },
+          "valid_until": "2021-03-06T20:03:45.874526805Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 96563998
+          },
+          "valid_until": "2021-03-06T20:03:45.877414886Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 100117523
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 105858293
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 583,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 583,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 583,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 583,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 583,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 110947703
+          },
+          "valid_until": "2021-03-06T20:13:23.891878071Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 50433535
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 54840534
+          },
+          "valid_until": "2021-03-06T21:03:22.932275345Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 50384278
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 51436932
+          },
+          "valid_until": "2021-03-06T20:13:25.943323532Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 56814748
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:1.1.1.1:53,name=Cloudflare 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 584,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 39207376
+          },
+          "valid_until": "2021-03-06T20:13:24.967058275Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 90690739
+          },
+          "valid_until": "2021-03-06T20:03:45.871703535Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 93071614
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 96133895
+          },
+          "valid_until": "2021-03-06T20:03:45.877182673Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 99722198
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 105382365
+          },
+          "valid_until": "2021-03-06T20:13:25.886478453Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 56211668
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53450530
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3582,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 57391749
+          },
+          "valid_until": "2021-03-06T21:03:22.934594494Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 48540307
+          },
+          "valid_until": "2021-03-06T20:13:25.935023936Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52394631
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2606:4700:4700::1001]:53,name=Cloudflare 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 582,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 33206874
+          },
+          "valid_until": "2021-03-06T20:13:22.968232616Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 93067540
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 95998565
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 98695073
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 106191928
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 117695632
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 51072597
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 49913667
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53742725
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52894021
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 51189029
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:94.103.153.176:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 44157433
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 96329421
+          },
+          "valid_until": "2021-03-06T20:03:44.876969294Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 99224392
+          },
+          "valid_until": "2021-03-06T20:03:44.880074235Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 104884740
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 111546077
+          },
+          "valid_until": "2021-03-06T20:13:24.892476744Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 116763344
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53364965
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 48649998
+          },
+          "valid_until": "2021-03-06T21:03:24.934415877Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52440890
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 584,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 52747405
+          },
+          "valid_until": "2021-03-06T20:13:24.950423983Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 55021247
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2001:4860:4860::8888]:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 599,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 41339065
+          },
+          "valid_until": "2021-03-06T20:13:39.975759225Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 98415562
+          },
+          "valid_until": "2021-03-06T20:03:44.879133620Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 109408376
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 113581073
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 119170174
+          },
+          "valid_until": "2021-03-06T20:13:39.900088856Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 123240381
+          },
+          "valid_until": "2021-03-06T20:03:44.904087192Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 58181953
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 58338673
+          },
+          "valid_until": "2021-03-06T21:03:24.952818299Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 584,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 49611895
+          },
+          "valid_until": "2021-03-06T20:13:24.953704441Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 54321734
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 61812033
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2001:4860:4860::8844]:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 584,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 43022819
+          },
+          "valid_until": "2021-03-06T20:13:24.980348001Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 95529216
+          },
+          "valid_until": "2021-03-06T20:03:44.876184760Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 111809423
+          },
+          "valid_until": "2021-03-06T20:03:44.892654325Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 124315062
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 125437919
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 599,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 126192584
+          },
+          "valid_until": "2021-03-06T20:13:39.907103770Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52455898
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3584,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 57667767
+          },
+          "valid_until": "2021-03-06T21:03:24.950329722Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 599,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 61493581
+          },
+          "valid_until": "2021-03-06T20:13:39.968615918Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 599,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 44414246
+          },
+          "valid_until": "2021-03-06T20:13:39.973065722Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 69638595
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:8.8.8.8:53,name=Google 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 73956906
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 93335246
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 96215324
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 99588186
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 105421319
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 109521325
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 56642357
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 57119160
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53248979
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53384526
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 58810286
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2a02:990:219:1:ba:1337:cafe:3]:53,name=OpenNIC",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 38480731
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 4,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 92710703
+          },
+          "valid_until": "2021-03-06T20:03:44.873774392Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 4,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 97255402
+          },
+          "valid_until": "2021-03-06T20:03:44.878296055Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 107244790
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 113218512
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 584,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 118808361
+          },
+          "valid_until": "2021-03-06T20:13:24.899934353Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53840271
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3599,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3599,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3599,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3599,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 61498404
+          },
+          "valid_until": "2021-03-06T21:03:39.939821281Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 50517540
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 599,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 50809650
+          },
+          "valid_until": "2021-03-06T20:13:39.950782496Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 53222822
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:8.8.4.4:53,name=Google 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 599,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 60018786
+          },
+          "valid_until": "2021-03-06T20:13:39.987643523Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 9191974
+          },
+          "valid_until": "2021-03-06T20:03:45.982864603Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 10265423
+          },
+          "valid_until": "2021-03-06T20:03:45.983959539Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 11240749
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 11578713
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 12571403
+          },
+          "valid_until": "2021-03-06T20:13:25.986297224Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6655888
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 7165627
+          },
+          "valid_until": "2021-03-06T21:03:25.991132567Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6530539
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 6495244
+          },
+          "valid_until": "2021-03-06T20:13:25.991787031Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6418516
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:192.168.101.1:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 585,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 7059024
+          },
+          "valid_until": "2021-03-06T20:13:25.996587799Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 10903552
+          },
+          "valid_until": "2021-03-06T20:03:45.986686479Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 11949437
+          },
+          "valid_until": "2021-03-06T20:03:45.987768512Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 12144372
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 13261197
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 13610141
+          },
+          "valid_until": "2021-03-06T20:13:25.989462876Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6073634
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 5636724
+          },
+          "valid_until": "2021-03-06T21:03:25.993404547Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6122375
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 5680487
+          },
+          "valid_until": "2021-03-06T20:13:25.994790146Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 6191145
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[fd00::3a10:d5ff:fe37:3620]:53,name=System",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 585,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 4456221
+          },
+          "valid_until": "2021-03-06T20:13:25.997229763Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 36872907
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 37700038
+          },
+          "valid_until": "2021-03-06T20:03:45.992109469Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 585,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 41090300
+          },
+          "valid_until": "2021-03-06T20:13:25.995531918Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 52759894
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 61423610
+          },
+          "valid_until": "2021-03-06T20:03:46.015787266Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 26251974
+          },
+          "valid_until": "2021-03-06T21:03:26.018359028Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 27498395
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 25299353
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 30334266
+          },
+          "valid_until": "2021-03-06T20:13:26.037526750Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 600,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 27274818
+          },
+          "valid_until": "2021-03-06T20:13:41.046069702Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:9.9.9.9:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 30619218
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 32961484
+          },
+          "valid_until": "2021-03-06T20:03:46.000063126Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 33469933
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 36485393
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 40293857
+          },
+          "valid_until": "2021-03-06T20:03:46.007374791Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 40827415
+          },
+          "valid_until": "2021-03-06T20:13:41.007984558Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 27201435
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 30148611
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 34112402
+          },
+          "valid_until": "2021-03-06T21:03:41.034692243Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 29825504
+          },
+          "valid_until": "2021-03-06T20:13:26.037819976Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 30502664
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2620:fe::fe]:53,name=Quad9 1",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 600,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 27305000
+          },
+          "valid_until": "2021-03-06T20:13:41.054576286Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 31504454
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 36083315
+          },
+          "valid_until": "2021-03-06T20:13:41.002942686Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 36741171
+          },
+          "valid_until": "2021-03-06T20:03:46.003569818Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 43556210
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 49005602
+          },
+          "valid_until": "2021-03-06T20:03:46.015808923Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 28876954
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3600,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 27523566
+          },
+          "valid_until": "2021-03-06T21:03:41.030466472Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 30388524
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 585,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 28754058
+          },
+          "valid_until": "2021-03-06T20:13:26.039168852Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 28006919
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:149.112.112.112:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 600,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 27938520
+          },
+          "valid_until": "2021-03-06T20:13:41.055170046Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "AAAA"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d23:4001"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "AAAA",
+              "ttl": 5,
+              "data": {
+                "AAAA": "2a03:b0c0:3:d0::d26:4001"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 36137898
+          },
+          "valid_until": "2021-03-06T20:03:46.004422842Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "ANAME"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 37442167
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "MX"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 1,
+                  "exchange": "aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt2.aspmx.l.google.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx2.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 10,
+                  "exchange": "aspmx3.googlemail.com."
+                }
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "MX",
+              "ttl": 600,
+              "data": {
+                "MX": {
+                  "preference": 5,
+                  "exchange": "alt1.aspmx.l.google.com."
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 42660744
+          },
+          "valid_until": "2021-03-06T20:13:41.010968374Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "CNAME"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 43053480
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "A"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "206.189.58.26"
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "A",
+              "ttl": 5,
+              "data": {
+                "A": "3.64.200.242"
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 43301308
+          },
+          "valid_until": "2021-03-06T20:03:46.011565570Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NS"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns3.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns4.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns1.p04.nsone.net."
+              }
+            },
+            {
+              "name": "pustina.de.",
+              "type": "NS",
+              "ttl": 3585,
+              "data": {
+                "NS": "dns2.p04.nsone.net."
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 29238081
+          },
+          "valid_until": "2021-03-06T21:03:26.034982487Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "NULL"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 33819059
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "PTR"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 27422862
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SRV"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "NxDomain": {
+          "response_time": {
+            "secs": 0,
+            "nanos": 31815394
+          }
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "TXT"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "TXT",
+              "ttl": 585,
+              "data": {
+                "TXT": {
+                  "txt_data": [
+                    [
+                      107,
+                      101,
+                      121,
+                      98,
+                      97,
+                      115,
+                      101,
+                      45,
+                      115,
+                      105,
+                      116,
+                      101,
+                      45,
+                      118,
+                      101,
+                      114,
+                      105,
+                      102,
+                      105,
+                      99,
+                      97,
+                      116,
+                      105,
+                      111,
+                      110,
+                      61,
+                      77,
+                      49,
+                      82,
+                      113,
+                      98,
+                      108,
+                      80,
+                      65,
+                      45,
+                      74,
+                      102,
+                      122,
+                      82,
+                      108,
+                      87,
+                      71,
+                      70,
+                      45,
+                      105,
+                      77,
+                      101,
+                      69,
+                      57,
+                      79,
+                      105,
+                      81,
+                      87,
+                      90,
+                      110,
+                      112,
+                      75,
+                      48,
+                      97,
+                      78,
+                      102,
+                      70,
+                      77,
+                      88,
+                      79,
+                      118,
+                      88,
+                      79,
+                      89
+                    ]
+                  ]
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 25830390
+          },
+          "valid_until": "2021-03-06T20:13:26.060813618Z"
+        }
+      }
+    },
+    {
+      "query": {
+        "name": "pustina.de.",
+        "record_type": "SOA"
+      },
+      "name_server": "udp:[2620:fe::9]:53,name=Quad9 2",
+      "result": {
+        "Response": {
+          "records": [
+            {
+              "name": "pustina.de.",
+              "type": "SOA",
+              "ttl": 600,
+              "data": {
+                "SOA": {
+                  "mname": "dns1.p04.nsone.net.",
+                  "rname": "hostmaster.nsone.net.",
+                  "serial": 1614249905,
+                  "refresh": 16384,
+                  "retry": 2048,
+                  "expire": 1209600,
+                  "minimum": 3600
+                }
+              }
+            }
+          ],
+          "response_time": {
+            "secs": 0,
+            "nanos": 52864265
+          },
+          "valid_until": "2021-03-06T20:13:41.064459843Z"
+        }
+      }
+    }
+  ]
+}
