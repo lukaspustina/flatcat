@@ -11,7 +11,7 @@ Of course there are similar tools like [jq](https://github.com/stedolan/jq) for 
 ## Features
 
 - Supports JSON, TOML, YAML, and more format are coming.
-- Support colorful output to ease readability
+- Supports colorful output to ease readability
 - Allows to ignore `Null` values
 - Unrecognized file formats are printed as they are plainly
 
@@ -19,13 +19,13 @@ Of course there are similar tools like [jq](https://github.com/stedolan/jq) for 
 
 1. Install `flatcat` – see below for [installation instructions](#installation).
 
-2. Run `fcat -n <file>` on any file you like. If it's a supported format, it will be flattened.
+2. Run `fcat -n <file>` on any file you like. If it's a supported format, it will be flattened. ![Flatten simple YAML file](doc/images/flatten-simple-yaml-file.png)
 
 3. Set shell alias `alias cat=fcat -n` to replace your system’s `cat` command.
 
+## Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Examples](#examples)
   - [YAML](#yaml)
