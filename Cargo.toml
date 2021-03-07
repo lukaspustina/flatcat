@@ -3,6 +3,7 @@ name = "flatcat"
 version = "0.0.1"
 authors = ["Lukas Pustina <lukas@pustina.de>"]
 edition = "2018"
+description = "Flatten nested formats into single lines with full path"
 
 [[bin]]
 name = "fcat"
@@ -18,6 +19,7 @@ anyhow = "1.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
 serde_yaml = "0.8"
+structopt = "0.3"
 thiserror = "1.0"
 toml = { version = "0.5", features = ["preserve_order"] }
 yansi = "0.5"

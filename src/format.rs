@@ -24,6 +24,18 @@ impl FormatHint {
     pub fn json() -> Self {
         FormatHint::Hint(Format::Json)
     }
+
+    pub fn toml() -> Self {
+        FormatHint::Hint(Format::Toml)
+    }
+
+    pub fn yaml() -> Self {
+        FormatHint::Hint(Format::Yaml)
+    }
+
+    pub fn hint(format: Format) -> Self {
+        FormatHint::Hint(format)
+    }
 }
 
 #[derive(Debug, Copy, Clone, PartialEq)]
