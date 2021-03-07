@@ -16,6 +16,7 @@ lazy_static! {
     static ref STYLE_BOOL: Style = Style::new(Color::Red);
     static ref STYLE_DATETIME: Style = Style::new(Color::Green);
     static ref STYLE_NUMBER: Style = Style::new(Color::Blue);
+    static ref STYLE_PLAIN: Style = Default::default();
     static ref STYLE_SPECIAL: Style = Style::new(Color::White).italic();
     static ref STYLE_STRING: Style = Style::new(Color::Yellow);
     static ref STYLE_VALUE_COUNT: Style = Style::new(Color::Yellow);
@@ -111,6 +112,12 @@ impl Output {
 
     pub fn special<T: Display>(&mut self, path: &str, str: T) {
         self.println(*STYLE_SPECIAL, path, str);
+    }
+
+    pub fn plain<T: Display>(&mut self, str: T) {
+        let prefix = self.prefix();
+        println!("{prefix}{str}", prefix = prefix, str = STYLE_PLAIN.paint(str));
+        self.value_counter += 1;
     }
 
     pub fn reset_value_counter(&mut self) {

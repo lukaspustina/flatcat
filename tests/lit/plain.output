@@ -1,0 +1,4 @@
+RUN: @fcat_bin --no-color Makefile
+
+CHECK: all: check build test
+CHECK-NEXT:

@@ -9,11 +9,13 @@ use std::io::Read;
 
 pub use crate::catter::toml::TomlCatter;
 pub use json::JsonCatter;
+pub use plain::PlainCatter;
 pub use yaml::YamlCatter;
 
 use crate::Result;
 
 pub mod json;
+pub mod plain;
 pub mod toml;
 pub mod yaml;
 

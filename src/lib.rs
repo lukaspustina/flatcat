@@ -24,17 +24,24 @@ pub mod output;
 pub type Result<T> = std::result::Result<T, error::Error>;
 
 #[derive(Debug, Clone)]
-pub struct FlatCatOpts {}
+pub struct FlatCatOpts {
+    /// If set, all inputs without identified format will be printed plainly like classic `cat` would do.
+    cat_plain: bool,
+}
 
 impl FlatCatOpts {
-    pub fn new() -> FlatCatOpts {
+    pub fn new() -> Self {
         Default::default()
+    }
+
+    pub fn with_plain(self, cat_plain: bool) -> Self {
+        FlatCatOpts { cat_plain }
     }
 }
 
 impl Default for FlatCatOpts {
     fn default() -> Self {
-        FlatCatOpts {}
+        FlatCatOpts { cat_plain: true }
     }
 }
 
@@ -52,25 +59,31 @@ impl FlatCat {
     pub fn cat(&mut self, input: Input) -> Result<()> {
         use crate::catter::Catter;
 
-        let format = input.format()?;
+        let format = input.format();
         let mut reader: InputReader = input.try_into()?;
 
         match format {
-            Format::Json => {
+            Ok(Format::Json) => {
                 let opts = self.opts.clone().into();
                 let mut catter = catter::JsonCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Format::Toml => {
+            Ok(Format::Toml) => {
                 let opts = self.opts.clone().into();
                 let mut catter = catter::TomlCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Format::Yaml => {
+            Ok(Format::Yaml) => {
                 let opts = self.opts.clone().into();
                 let mut catter = catter::YamlCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
+            Err(_) if self.opts.cat_plain => {
+                let opts = self.opts.clone().into();
+                let mut catter = catter::PlainCatter::new(opts, &mut self.output);
+                catter.cat(&mut reader)
+            }
+            Err(err) => Err(err),
         }
     }
 }
