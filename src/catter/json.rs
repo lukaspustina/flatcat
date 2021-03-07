@@ -54,7 +54,7 @@ impl<'a> JsonCatter<'a> {
 
     fn do_json(&mut self, path: &mut String, json: Value) -> Result<()> {
         match json {
-            Value::Null => self.output.special(&path, "null"),
+            Value::Null => self.output.null(&path),
             Value::Bool(x) => self.output.bool(&path, &x),
             Value::Number(x) => self.output.number(&path, &x),
             Value::String(x) => self.output.string(&path, &x),

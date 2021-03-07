@@ -54,7 +54,7 @@ impl<'a> YamlCatter<'a> {
 
     fn do_yaml(&mut self, path: &mut String, yaml: Value) -> Result<()> {
         match yaml {
-            Value::Null => self.output.special(&path, "null"),
+            Value::Null => self.output.null(&path),
             Value::Bool(x) => self.output.bool(&path, &x),
             Value::Number(x) => self.output.number(&path, &x),
             Value::String(x) => self.output.string(&path, &x),

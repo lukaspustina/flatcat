@@ -24,6 +24,7 @@ lazy_static! {
 #[derive(Debug, Clone)]
 pub struct OutputOpts {
     colorful: bool,
+    null: bool,
     quotes: bool,
     show_value_counter: bool,
 }
@@ -32,6 +33,7 @@ impl Default for OutputOpts {
     fn default() -> Self {
         OutputOpts {
             colorful: true,
+            null: true,
             quotes: true,
             show_value_counter: false,
         }
@@ -49,6 +51,10 @@ impl OutputOpts {
 
     pub fn with_quotes(self, quotes: bool) -> Self {
         OutputOpts { quotes, ..self }
+    }
+
+    pub fn with_null(self, null: bool) -> Self {
+        OutputOpts { null, ..self }
     }
 
     pub fn with_value_counter(self, show_value_counter: bool) -> Self {
@@ -94,6 +100,12 @@ impl Output {
             self.println(*STYLE_STRING, path, format!("\"{}\"", str));
         } else {
             self.println(*STYLE_STRING, path, str);
+        }
+    }
+
+    pub fn null(&mut self, path: &str) {
+        if self.opts.null {
+            self.special(path, "null")
         }
     }
 
