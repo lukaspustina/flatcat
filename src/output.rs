@@ -27,7 +27,7 @@ pub struct OutputOpts {
     colorful: bool,
     null: bool,
     quotes: bool,
-    value_numbers: bool,
+    numbers: bool,
 }
 
 impl Default for OutputOpts {
@@ -36,7 +36,7 @@ impl Default for OutputOpts {
             colorful: true,
             null: true,
             quotes: true,
-            value_numbers: false,
+            numbers: false,
         }
     }
 }
@@ -58,11 +58,8 @@ impl OutputOpts {
         OutputOpts { null, ..self }
     }
 
-    pub fn with_value_numbers(self, show_value_counter: bool) -> Self {
-        OutputOpts {
-            value_numbers: show_value_counter,
-            ..self
-        }
+    pub fn with_numbers(self, numbers: bool) -> Self {
+        OutputOpts { numbers, ..self }
     }
 }
 
@@ -125,11 +122,11 @@ impl Output {
     }
 
     fn prefix(&self) -> Cow<str> {
-        if !self.opts.value_numbers {
+        if !self.opts.numbers {
             return Cow::Borrowed(EMPTY_PREFIX);
         }
 
-        let prefix = if self.opts.value_numbers {
+        let prefix = if self.opts.numbers {
             format!("{:>5}  ", STYLE_VALUE_COUNT.paint(self.value_counter))
         } else {
             String::new()

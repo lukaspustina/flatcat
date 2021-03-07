@@ -17,7 +17,7 @@ fn main() -> Result<()> {
         .with_color(!opts.no_color)
         .with_null(!opts.no_null)
         .with_quotes(!opts.no_quotes)
-        .with_value_numbers(opts.value_numbers);
+        .with_numbers(opts.numbers);
     let output = Output::new(output_opts);
 
     let flatcat_opts = FlatCatOpts::new().with_plain(!opts.no_plain);

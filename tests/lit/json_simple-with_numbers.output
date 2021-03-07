@@ -1,6 +1,6 @@
-RUN: @fcat_bin --no-color --value-numbers tests/files/simple.yaml
+RUN: @fcat_bin --no-color --numbers tests/files/simple.json
 
-CHECK: 1  .file_type: "yaml"
+CHECK: 1  .file_type: "json"
 CHECK-NEXT: 2  .persons[0].age: 42
 CHECK-NEXT: 3  .persons[0].name.family_name: "Pustina"
 CHECK-NEXT: 4  .persons[0].name.first_name: "Lukas"
