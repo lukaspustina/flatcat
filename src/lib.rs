@@ -57,12 +57,17 @@ impl FlatCat {
         match format {
             Format::Json => {
                 let opts = self.opts.clone().into();
-                let catter = catter::json::JsonCatter::new(opts, &self.output);
+                let catter = catter::JsonCatter::new(opts, &self.output);
+                catter.cat(&mut reader)
+            }
+            Format::Toml => {
+                let opts = self.opts.clone().into();
+                let catter = catter::TomlCatter::new(opts, &self.output);
                 catter.cat(&mut reader)
             }
             Format::Yaml => {
                 let opts = self.opts.clone().into();
-                let catter = catter::yaml::YamlCatter::new(opts, &self.output);
+                let catter = catter::YamlCatter::new(opts, &self.output);
                 catter.cat(&mut reader)
             }
         }

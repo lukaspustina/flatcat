@@ -1,0 +1,9 @@
+file_type = "toml"
+
+[[persons]]
+age = 42
+name.family_name = "Pustina"
+name.first_name = "Lukas"
+phone = ""
+super_cool = true
+birth_day = 1970-01-01T07:32:00Z

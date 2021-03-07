@@ -50,6 +50,10 @@ impl Output {
         println!("{}: {}", path, Red.paint(b));
     }
 
+    pub fn datetime<T: Display>(&self, path: &str, datetime: T) {
+        println!("{}: {}", path, Green.paint(datetime));
+    }
+
     pub fn number<T: Display>(&self, path: &str, number: T) {
         println!("{}: {}", path, Blue.paint(number));
     }

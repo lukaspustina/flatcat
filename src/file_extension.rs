@@ -20,6 +20,7 @@ impl FileExtension {
         // see https://github.com/BurntSushi/ripgrep/blob/9c8d873a75ccb2a8d3ed692148becb2e72514732/crates/ignore/src/default_types.rs
         match str.as_ref() {
             "json" => Ok(Format::Json),
+            "toml" => Ok(Format::Toml),
             "yaml" | "yml" => Ok(Format::Yaml),
             _ => Err(Error::UnknownFormatExtError { ext: str.into_owned() }),
         }
@@ -42,6 +43,18 @@ mod tests {
             .that(&format)
             .is_ok()
             .is_equal_to(&Format::Json);
+    }
+
+    #[test]
+    fn toml() {
+        let ext = OsStr::new("toml");
+
+        let format = FileExtension::guess_format(ext);
+
+        asserting("toml extension")
+            .that(&format)
+            .is_ok()
+            .is_equal_to(&Format::Toml);
     }
 
     #[test]

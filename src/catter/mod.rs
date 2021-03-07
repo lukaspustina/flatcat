@@ -7,9 +7,14 @@
 
 use std::io::Read;
 
+pub use crate::catter::toml::TomlCatter;
+pub use json::JsonCatter;
+pub use yaml::YamlCatter;
+
 use crate::Result;
 
 pub mod json;
+pub mod toml;
 pub mod yaml;
 
 pub trait Catter {

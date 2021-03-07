@@ -12,6 +12,12 @@ use thiserror::Error;
 ///
 /// Must be `Send` because it used by async function which might run on different threads.
 pub enum Error {
+    #[error("failed to parse '{what}' to {to} because {why}")]
+    ParserError {
+        what: String,
+        to: &'static str,
+        why: String,
+    },
     #[error("failed to identify input format because {msg}")]
     UnknownFormatError { msg: &'static str },
     #[error("failed to identify input format of file with extension '{ext}'")]
@@ -25,6 +31,11 @@ pub enum Error {
     JsonError {
         #[from]
         source: serde_json::Error,
+    },
+    #[error("failed to deserialize to Toml")]
+    TomlError {
+        #[from]
+        source: toml::de::Error,
     },
     #[error("failed to deserialize to Yaml")]
     YamlError {
