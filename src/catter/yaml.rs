@@ -7,70 +7,71 @@
 
 use std::io::Read;
 
-use serde_json::{de::from_reader, Value};
+use serde_yaml::{from_reader, Value};
 
 use crate::catter::Catter;
 use crate::output::Output;
 use crate::{FlatCatOpts, Result};
 
 #[derive(Debug, Clone)]
-pub struct JsonCatterOpts {}
+pub struct YamlCatterOpts {}
 
-impl JsonCatterOpts {
-    pub fn new() -> JsonCatterOpts {
-        JsonCatterOpts {}
+impl YamlCatterOpts {
+    pub fn new() -> YamlCatterOpts {
+        YamlCatterOpts {}
     }
 }
 
-impl Default for JsonCatterOpts {
+impl Default for YamlCatterOpts {
     fn default() -> Self {
-        JsonCatterOpts {}
+        YamlCatterOpts {}
     }
 }
 
-impl From<FlatCatOpts> for JsonCatterOpts {
+impl From<FlatCatOpts> for YamlCatterOpts {
     fn from(_: FlatCatOpts) -> Self {
-        JsonCatterOpts {}
+        YamlCatterOpts {}
     }
 }
 
 #[derive(Debug)]
-pub struct JsonCatter<'a> {
+pub struct YamlCatter<'a> {
     #[allow(dead_code)]
-    opts: JsonCatterOpts,
+    opts: YamlCatterOpts,
     output: &'a Output,
 }
 
-impl<'a> JsonCatter<'a> {
-    pub fn new(opts: JsonCatterOpts, output: &Output) -> JsonCatter {
-        JsonCatter { opts, output }
+impl<'a> YamlCatter<'a> {
+    pub fn new(opts: YamlCatterOpts, output: &Output) -> YamlCatter {
+        YamlCatter { opts, output }
     }
 
-    fn json(&self, json: Value) -> Result<()> {
+    fn yaml(&self, yaml: Value) -> Result<()> {
         let mut path = String::new();
 
-        self.do_json(&mut path, json)
+        self.do_yaml(&mut path, yaml)
     }
 
-    fn do_json(&self, path: &mut String, json: Value) -> Result<()> {
-        match json {
+    fn do_yaml(&self, path: &mut String, yaml: Value) -> Result<()> {
+        match yaml {
             Value::Null => self.output.special(&path, "null"),
             Value::Bool(x) => self.output.bool(&path, &x),
             Value::Number(x) => self.output.number(&path, &x),
             Value::String(x) => self.output.string(&path, &x),
-            Value::Array(x) => {
+            Value::Sequence(x) => {
                 for (i, value) in x.into_iter().enumerate() {
                     let key = self.output.array(i);
                     path.push_str(&key);
-                    self.do_json(path, value)?;
+                    self.do_yaml(path, value)?;
                     path.truncate(path.len() - key.len());
                 }
             }
-            Value::Object(x) => {
+            Value::Mapping(x) => {
                 for (key, value) in x {
-                    let key = format!(".{}", key);
+                    // TODO: value is not a string?!
+                    let key = format!(".{}", key.as_str().unwrap());
                     path.push_str(&key);
-                    self.do_json(path, value)?;
+                    self.do_yaml(path, value)?;
                     path.truncate(path.len() - key.len());
                 }
             }
@@ -80,11 +81,11 @@ impl<'a> JsonCatter<'a> {
     }
 }
 
-impl<'a> Catter for JsonCatter<'a> {
+impl<'a> Catter for YamlCatter<'a> {
     fn cat<R: Read>(&self, read: &mut R) -> Result<()> {
-        let json: Value = from_reader(read)?;
+        let yaml: Value = from_reader(read)?;
 
-        self.json(json)?;
+        self.yaml(yaml)?;
 
         Ok(())
     }

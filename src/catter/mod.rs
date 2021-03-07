@@ -10,6 +10,7 @@ use std::io::Read;
 use crate::Result;
 
 pub mod json;
+pub mod yaml;
 
 pub trait Catter {
     fn cat<R: Read>(&self, read: &mut R) -> Result<()>;

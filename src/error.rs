@@ -26,4 +26,9 @@ pub enum Error {
         #[from]
         source: serde_json::Error,
     },
+    #[error("failed to deserialize to Yaml")]
+    YamlError {
+        #[from]
+        source: serde_yaml::Error,
+    },
 }

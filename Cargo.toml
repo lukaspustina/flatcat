@@ -17,6 +17,7 @@ path = "src/lib.rs"
 anyhow = "1.0"
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
+serde_yaml = "0.8"
 thiserror = "1.0"
 yansi = "0.5"
 

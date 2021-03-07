@@ -17,8 +17,10 @@ pub struct FileExtension {}
 impl FileExtension {
     pub fn guess_format(ext: &OsStr) -> Result<Format> {
         let str = ext.to_string_lossy();
+        // see https://github.com/BurntSushi/ripgrep/blob/9c8d873a75ccb2a8d3ed692148becb2e72514732/crates/ignore/src/default_types.rs
         match str.as_ref() {
             "json" => Ok(Format::Json),
+            "yaml" | "yml" => Ok(Format::Yaml),
             _ => Err(Error::UnknownFormatExtError { ext: str.into_owned() }),
         }
     }
@@ -40,5 +42,29 @@ mod tests {
             .that(&format)
             .is_ok()
             .is_equal_to(&Format::Json);
+    }
+
+    #[test]
+    fn yaml() {
+        let ext = OsStr::new("yaml");
+
+        let format = FileExtension::guess_format(ext);
+
+        asserting("yaml extension")
+            .that(&format)
+            .is_ok()
+            .is_equal_to(&Format::Yaml);
+    }
+
+    #[test]
+    fn yml() {
+        let ext = OsStr::new("yml");
+
+        let format = FileExtension::guess_format(ext);
+
+        asserting("yml extension")
+            .that(&format)
+            .is_ok()
+            .is_equal_to(&Format::Yaml);
     }
 }

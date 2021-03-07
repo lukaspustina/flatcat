@@ -27,6 +27,7 @@ impl FormatHint {
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Format {
     Json,
+    Yaml,
 }
 
 impl Format {

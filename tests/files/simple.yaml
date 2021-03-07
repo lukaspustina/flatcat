@@ -1,0 +1,9 @@
+---
+file_type: yaml
+persons:
+  - age: 42
+    name:
+      family_name: Pustina
+      first_name: Lukas
+    phone:
+    super_cool: true

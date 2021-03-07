@@ -60,6 +60,11 @@ impl FlatCat {
                 let catter = catter::json::JsonCatter::new(opts, &self.output);
                 catter.cat(&mut reader)
             }
+            Format::Yaml => {
+                let opts = self.opts.clone().into();
+                let catter = catter::yaml::YamlCatter::new(opts, &self.output);
+                catter.cat(&mut reader)
+            }
         }
     }
 }
