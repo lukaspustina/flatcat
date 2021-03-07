@@ -11,7 +11,7 @@ class Flatcat < Formula
   def install
     system "cargo", "install", *std_cargo_args
 
-    out_dir = Dir["target/release/build/fcat-*/out"].first
+    out_dir = Dir["target/release/build/flatcat-*/out"].first
     # man1.install "#{out_dir}/man.1"
     bash_completion.install "#{out_dir}/fcat.bash"
     fish_completion.install "#{out_dir}/fcat.fish"
