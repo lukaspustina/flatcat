@@ -73,4 +73,4 @@ package = "flatcat"
 buildflags = ["--release"]
 
 [package.metadata.rpm.targets]
-mhost = { path = "/usr/bin/fcat" }
+fcat = { path = "/usr/bin/fcat" }
