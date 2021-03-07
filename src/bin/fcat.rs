@@ -6,12 +6,18 @@
 // copied, modified, or distributed except according to those terms.
 
 use anyhow::{Context, Result};
-use flatcat::{FlatCat, Format, FormatHint, Input, Output, OutputOpts};
+use flatcat::{cli_parser::Opts, FlatCat, Format, FormatHint, Input, Output, OutputOpts};
 use std::str::FromStr;
 use structopt::StructOpt;
 
 fn main() -> Result<()> {
-    let opts = flatcat::cli_parser::Opts::from_args();
+    let opts = Opts::from_args();
+
+    if opts.files.is_empty() {
+        let _ = Opts::clap().print_help();
+        println!();
+        return Ok(());
+    }
 
     let output_opts = OutputOpts::new()
         .with_color(!opts.no_color)

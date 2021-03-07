@@ -1,0 +1,6 @@
+RUN: @fcat_bin
+
+CHECK: fcat
+CHECK: Flatten
+CHECK: USAGE:
+CHECK: OPTIONS:

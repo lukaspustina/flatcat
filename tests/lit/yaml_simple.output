@@ -1,0 +1,8 @@
+RUN: @fcat_bin --no-color tests/files/simple.yaml
+
+CHECK: .file_type: "yaml"
+CHECK-NEXT: .persons[0].age: 42
+CHECK-NEXT: .persons[0].name.family_name: "Pustina"
+CHECK-NEXT: .persons[0].name.first_name: "Lukas"
+CHECK-NEXT: .persons[0].phone: null
+CHECK-NEXT: .persons[0].super_cool: true

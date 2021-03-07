@@ -1,0 +1,9 @@
+RUN: @fcat_bin --no-color --value-counter tests/files/mhost.lookup.pustina_de.json
+
+CHECK: 1  .info.start_time: "2021-03-06T20:03:40.769091Z"
+CHECK-NEXT: 2  .info.command_line: "-q -p -o json l --all pustina.de"
+CHECK-NEXT: 3  .info.version: "0.3.0"
+CHECK-NEXT: 4  .lookups[0].query.name: "pustina.de."
+CHECK-NEXT: 5  .lookups[0].query.record_type: "A"
+CHECK: 2469  .lookups[153].result.Response.records[0].data.TXT.txt_data[0][27]: 49
+CHECK: 2913  .lookups[175].result.Response.valid_until: "2021-03-06T20:13:41.064459843Z"

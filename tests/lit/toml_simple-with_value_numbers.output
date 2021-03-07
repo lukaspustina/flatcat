@@ -1,0 +1,9 @@
+RUN: @fcat_bin --no-color --value-counter tests/files/simple.toml
+
+CHECK: 1  .file_type: "toml"
+CHECK-NEXT: 2  .persons[0].age: 42
+CHECK-NEXT: 3  .persons[0].name.family_name: "Pustina"
+CHECK-NEXT: 4  .persons[0].name.first_name: "Lukas"
+CHECK-NEXT: 5  .persons[0].phone: ""
+CHECK-NEXT: 6  .persons[0].super_cool: true
+CHECK-NEXT: 7  .persons[0].birth_day: 1970-01-01T07:32:00Z

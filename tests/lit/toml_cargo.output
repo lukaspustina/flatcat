@@ -1,0 +1,6 @@
+RUN: @fcat_bin --no-color --value-counter Cargo.toml
+
+CHECK: 1  .package.name: "flatcat"
+CHECK-NEXT: 2  .package.version:
+CHECK-NEXT: 3  .package.authors[0]: "Lukas Pustina <lukas@pustina.de>"
+CHECK-NEXT: 4  .package.edition: "2018"
