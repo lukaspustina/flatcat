@@ -6,7 +6,7 @@ Flatten nested file formats like JSON, TOML, YAML into single lines with full pa
 
 `flatcat`'s main purpose it to allow to use standard UNIX file commands like `grep`, `awk`, and `sed` to parse nested and hierarchical file formats like JSON, TOML, YAML etc. These files have become the de-facto standard for configurations, but there is little support to deal with these files. `flatcat` helps here by allowing flatten the hierarchical structures into single lines per value with each line containing the whole path to the value.
 
-Of course there are similar tools like [jq](https://github.com/stedolan/jq) for JSON and [yq](https://github.com/mikefarah/yq) for YAML, but they are primarily suited to directly query the data structures which requires you to know what your actually looking for. `flacat` tries to help to discover these paths -- see the [examples](#examples) section.
+Of course there are similar tools like [jq](https://github.com/stedolan/jq) for JSON and [yq](https://github.com/mikefarah/yq) for YAML, but they are primarily suited to directly query the data structures which requires you to know what your actually looking for. `flatcat` tries to help to discover these paths -- see the [examples](#examples) section.
 
 ## Features
 
