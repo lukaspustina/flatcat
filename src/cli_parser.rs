@@ -34,7 +34,7 @@ pub struct Opts {
     #[structopt(long = "no-quotes")]
     pub no_quotes: bool,
     /// Numbers the output values, starting at 1
-    #[structopt(short = "s", long = "numbers")]
+    #[structopt(short = "n", long = "numbers")]
     pub numbers: bool,
     /// Sets file type instead of guessing
     #[structopt(name = "TYPE", short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]))]
