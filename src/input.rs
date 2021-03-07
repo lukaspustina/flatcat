@@ -9,15 +9,17 @@
  */
 
 use std::convert::TryFrom;
+use std::fmt;
+use std::fmt::{Debug, Formatter};
 use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::{Path, PathBuf};
 
-use crate::{Format, FormatHint, Result};
+use crate::{Error, Format, FormatHint, Result};
 
-#[derive(Debug)]
 pub enum Input {
     Path(PathBuf, FormatHint),
+    Read(Box<dyn Read>, FormatHint),
 }
 
 impl Input {
@@ -26,9 +28,14 @@ impl Input {
         Input::Path(path, FormatHint::Empty)
     }
 
+    pub fn from_read<R: Read + 'static>(reader: R) -> Input {
+        Input::Read(Box::new(reader), FormatHint::Empty)
+    }
+
     pub fn with_format_hint(self, hint: FormatHint) -> Self {
         match self {
             Input::Path(path, _) => Input::Path(path, hint),
+            Input::Read(reader, _) => Input::Read(reader, hint),
         }
     }
 
@@ -36,6 +43,19 @@ impl Input {
         match self {
             Input::Path(_, FormatHint::Hint(format)) => Ok(*format),
             Input::Path(p, FormatHint::Empty) => Format::guess_from_file_extension(p),
+            Input::Read(_, FormatHint::Hint(format)) => Ok(*format),
+            Input::Read(_, FormatHint::Empty) => Err(Error::UnknownFormatError {
+                msg: "cannot determine format from stream",
+            }),
+        }
+    }
+}
+
+impl Debug for Input {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        match self {
+            Input::Path(path, hint) => f.write_fmt(format_args!("Input::Path(path={:?}, hint={:?})", path, hint)),
+            Input::Read(_, hint) => f.write_fmt(format_args!("Input::Read(hint={:?})", hint)),
         }
     }
 }
@@ -62,6 +82,7 @@ impl TryFrom<Input> for InputReader {
                     inner: Box::new(buf_reader),
                 })
             }
+            Input::Read(inner, _) => Ok(InputReader { inner }),
         }
     }
 }

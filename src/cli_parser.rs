@@ -18,8 +18,8 @@ about = env!("CARGO_PKG_DESCRIPTION"),
 global_setting(structopt::clap::AppSettings::UnifiedHelpMessage),
 )]
 pub struct Opts {
-    /// Files to flatten, print, and concat
-    #[structopt(name = "FILE", required(true))]
+    /// Files to flatten, print, and concat; if single '-' or absent, fcat reads from stdin
+    #[structopt(name = "FILE")]
     pub files: Vec<String>,
     /// Disables colorful output
     #[structopt(long = "no-color")]
