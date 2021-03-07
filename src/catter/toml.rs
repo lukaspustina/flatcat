@@ -38,21 +38,21 @@ impl From<FlatCatOpts> for TomlCatterOpts {
 pub struct TomlCatter<'a> {
     #[allow(dead_code)]
     opts: TomlCatterOpts,
-    output: &'a Output,
+    output: &'a mut Output,
 }
 
 impl<'a> TomlCatter<'a> {
-    pub fn new(opts: TomlCatterOpts, output: &Output) -> TomlCatter {
+    pub fn new(opts: TomlCatterOpts, output: &mut Output) -> TomlCatter {
         TomlCatter { opts, output }
     }
 
-    fn toml(&self, toml: Value) -> Result<()> {
+    fn toml(&mut self, toml: Value) -> Result<()> {
         let mut path = String::new();
 
         self.do_toml(&mut path, toml)
     }
 
-    fn do_toml(&self, path: &mut String, toml: Value) -> Result<()> {
+    fn do_toml(&mut self, path: &mut String, toml: Value) -> Result<()> {
         match toml {
             Value::Boolean(x) => self.output.bool(&path, &x),
             Value::Integer(x) => self.output.number(&path, &x),
@@ -82,7 +82,7 @@ impl<'a> TomlCatter<'a> {
 }
 
 impl<'a> Catter for TomlCatter<'a> {
-    fn cat<R: Read>(&self, read: &mut R) -> Result<()> {
+    fn cat<R: Read>(&mut self, read: &mut R) -> Result<()> {
         let mut buffer = Vec::new();
         read.read_to_end(buffer.as_mut())?;
         let toml: Value = from_slice(&buffer)?;

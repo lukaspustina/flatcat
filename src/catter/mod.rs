@@ -18,5 +18,5 @@ pub mod toml;
 pub mod yaml;
 
 pub trait Catter {
-    fn cat<R: Read>(&self, read: &mut R) -> Result<()>;
+    fn cat<R: Read>(&mut self, read: &mut R) -> Result<()>;
 }

@@ -14,7 +14,7 @@ fn main() {
     let output = Output::new(opts);
 
     let opts = Default::default();
-    let flat_cat = FlatCat::new(opts, output);
+    let mut flat_cat = FlatCat::new(opts, output);
 
     flat_cat.cat(input).expect("Failed to cat file");
 }

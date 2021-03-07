@@ -38,21 +38,21 @@ impl From<FlatCatOpts> for JsonCatterOpts {
 pub struct JsonCatter<'a> {
     #[allow(dead_code)]
     opts: JsonCatterOpts,
-    output: &'a Output,
+    output: &'a mut Output,
 }
 
 impl<'a> JsonCatter<'a> {
-    pub fn new(opts: JsonCatterOpts, output: &Output) -> JsonCatter {
+    pub fn new(opts: JsonCatterOpts, output: &mut Output) -> JsonCatter {
         JsonCatter { opts, output }
     }
 
-    fn json(&self, json: Value) -> Result<()> {
+    fn json(&mut self, json: Value) -> Result<()> {
         let mut path = String::new();
 
         self.do_json(&mut path, json)
     }
 
-    fn do_json(&self, path: &mut String, json: Value) -> Result<()> {
+    fn do_json(&mut self, path: &mut String, json: Value) -> Result<()> {
         match json {
             Value::Null => self.output.special(&path, "null"),
             Value::Bool(x) => self.output.bool(&path, &x),
@@ -81,7 +81,7 @@ impl<'a> JsonCatter<'a> {
 }
 
 impl<'a> Catter for JsonCatter<'a> {
-    fn cat<R: Read>(&self, read: &mut R) -> Result<()> {
+    fn cat<R: Read>(&mut self, read: &mut R) -> Result<()> {
         let json: Value = from_reader(read)?;
 
         self.json(json)?;

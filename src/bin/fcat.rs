@@ -20,10 +20,16 @@ use structopt::StructOpt;
 struct Opts {
     /// File to flatten and print
     file: String,
-    /// Disable colorful output
+    /// Disables colorful output
     #[structopt(long = "no-color")]
     no_color: bool,
-    /// Set file type instead of guessing
+    /// Disables quoting ("text") strings
+    #[structopt(long = "no-quotes")]
+    no_quotes: bool,
+    /// Numbers the output values, starting at 1
+    #[structopt(long = "value-counter")]
+    value_counter: bool,
+    /// Sets file type instead of guessing
     #[structopt(short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]), validator(| str | Format::from_str(& str).map(| _ | ()).map_err(| _ | "invalid file type".to_string())))]
     format: Option<Format>,
 }
@@ -36,11 +42,14 @@ fn main() -> Result<()> {
         input = input.with_format_hint(FormatHint::hint(format));
     }
 
-    let opts = OutputOpts::new().with_color(!opts.no_color);
+    let opts = OutputOpts::new()
+        .with_color(!opts.no_color)
+        .with_quotes(!opts.no_quotes)
+        .with_value_counter(opts.value_counter);
     let output = Output::new(opts);
 
     let opts = Default::default();
-    let flat_cat = FlatCat::new(opts, output);
+    let mut flat_cat = FlatCat::new(opts, output);
 
     flat_cat.cat(input).context("Failed to cat file")?;
 

@@ -48,7 +48,7 @@ impl FlatCat {
         FlatCat { opts, output }
     }
 
-    pub fn cat(&self, input: Input) -> Result<()> {
+    pub fn cat(&mut self, input: Input) -> Result<()> {
         use crate::catter::Catter;
 
         let format = input.format()?;
@@ -57,17 +57,17 @@ impl FlatCat {
         match format {
             Format::Json => {
                 let opts = self.opts.clone().into();
-                let catter = catter::JsonCatter::new(opts, &self.output);
+                let mut catter = catter::JsonCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Format::Toml => {
                 let opts = self.opts.clone().into();
-                let catter = catter::TomlCatter::new(opts, &self.output);
+                let mut catter = catter::TomlCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Format::Yaml => {
                 let opts = self.opts.clone().into();
-                let catter = catter::YamlCatter::new(opts, &self.output);
+                let mut catter = catter::YamlCatter::new(opts, &mut self.output);
                 catter.cat(&mut reader)
             }
         }

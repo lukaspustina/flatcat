@@ -38,21 +38,21 @@ impl From<FlatCatOpts> for YamlCatterOpts {
 pub struct YamlCatter<'a> {
     #[allow(dead_code)]
     opts: YamlCatterOpts,
-    output: &'a Output,
+    output: &'a mut Output,
 }
 
 impl<'a> YamlCatter<'a> {
-    pub fn new(opts: YamlCatterOpts, output: &Output) -> YamlCatter {
+    pub fn new(opts: YamlCatterOpts, output: &mut Output) -> YamlCatter {
         YamlCatter { opts, output }
     }
 
-    fn yaml(&self, yaml: Value) -> Result<()> {
+    fn yaml(&mut self, yaml: Value) -> Result<()> {
         let mut path = String::new();
 
         self.do_yaml(&mut path, yaml)
     }
 
-    fn do_yaml(&self, path: &mut String, yaml: Value) -> Result<()> {
+    fn do_yaml(&mut self, path: &mut String, yaml: Value) -> Result<()> {
         match yaml {
             Value::Null => self.output.special(&path, "null"),
             Value::Bool(x) => self.output.bool(&path, &x),
@@ -82,7 +82,7 @@ impl<'a> YamlCatter<'a> {
 }
 
 impl<'a> Catter for YamlCatter<'a> {
-    fn cat<R: Read>(&self, read: &mut R) -> Result<()> {
+    fn cat<R: Read>(&mut self, read: &mut R) -> Result<()> {
         let yaml: Value = from_reader(read)?;
 
         self.yaml(yaml)?;
