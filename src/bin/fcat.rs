@@ -13,12 +13,6 @@ use structopt::StructOpt;
 fn main() -> Result<()> {
     let opts = Opts::from_args();
 
-    if opts.files.is_empty() {
-        let _ = Opts::clap().print_help();
-        println!();
-        return Ok(());
-    }
-
     let output_opts = OutputOpts::new()
         .with_color(!opts.no_color)
         .with_null(!opts.no_null)

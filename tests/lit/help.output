@@ -1,4 +1,4 @@
-RUN: @fcat_bin
+RUN: @fcat_bin --help
 
 CHECK: fcat
 CHECK: Flatten
