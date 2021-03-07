@@ -7,7 +7,10 @@
 
 use lazy_static::lazy_static;
 use std::borrow::Cow;
-use std::fmt::Display;
+use std::convert::TryFrom;
+use std::fmt::{Debug, Display, Formatter};
+use std::io::Write;
+use std::{fmt, io};
 use yansi::{Color, Style};
 
 static EMPTY_PREFIX: &str = "";
@@ -63,18 +66,44 @@ impl OutputOpts {
     }
 }
 
-#[derive(Debug)]
-pub struct Output {
+pub enum Output {
+    Write(Box<dyn Write>, OutputOpts),
+}
+
+impl Output {
+    pub fn from_writer<W: Write + 'static>(writer: W, opts: OutputOpts) -> Self {
+        Output::Write(Box::new(writer), opts)
+    }
+
+    pub fn from_stdout(opts: OutputOpts) -> Self {
+        Output::from_writer(io::stdout(), opts)
+    }
+}
+
+impl Debug for Output {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        match self {
+            Output::Write(_, opts) => f.write_fmt(format_args!("Output::Write(opts={:?})", opts)),
+        }
+    }
+}
+
+pub struct OutputWriter {
+    inner: Box<dyn Write>,
     opts: OutputOpts,
     value_counter: usize,
 }
 
-impl Output {
-    pub fn new(opts: OutputOpts) -> Self {
+impl OutputWriter {
+    pub fn from_writer(inner: Box<dyn Write>, opts: OutputOpts) -> Self {
         if !opts.colorful {
             yansi::Paint::disable();
         }
-        Output { opts, value_counter: 1 }
+        OutputWriter {
+            inner,
+            opts,
+            value_counter: 1,
+        }
     }
 
     pub fn array(&self, i: usize) -> String {
@@ -82,22 +111,22 @@ impl Output {
     }
 
     pub fn bool<T: Display>(&mut self, path: &str, b: T) {
-        self.println(*STYLE_BOOL, path, b);
+        self.writeln(*STYLE_BOOL, path, b);
     }
 
     pub fn datetime<T: Display>(&mut self, path: &str, datetime: T) {
-        self.println(*STYLE_DATETIME, path, datetime);
+        self.writeln(*STYLE_DATETIME, path, datetime);
     }
 
     pub fn number<T: Display>(&mut self, path: &str, number: T) {
-        self.println(*STYLE_NUMBER, path, number);
+        self.writeln(*STYLE_NUMBER, path, number);
     }
 
     pub fn string<T: Display>(&mut self, path: &str, str: T) {
         if self.opts.quotes {
-            self.println(*STYLE_STRING, path, format!("\"{}\"", str));
+            self.writeln(*STYLE_STRING, path, format!("\"{}\"", str));
         } else {
-            self.println(*STYLE_STRING, path, str);
+            self.writeln(*STYLE_STRING, path, str);
         }
     }
 
@@ -108,12 +137,16 @@ impl Output {
     }
 
     pub fn special<T: Display>(&mut self, path: &str, str: T) {
-        self.println(*STYLE_SPECIAL, path, str);
+        self.writeln(*STYLE_SPECIAL, path, str);
     }
 
     pub fn plain<T: Display>(&mut self, str: T) {
-        let prefix = self.prefix();
-        println!("{prefix}{str}", prefix = prefix, str = STYLE_PLAIN.paint(str));
+        let prefix = prefix(self.opts.numbers, self.value_counter);
+        let _ = self.inner.write_fmt(format_args!(
+            "{prefix}{str}\n",
+            prefix = prefix,
+            str = STYLE_PLAIN.paint(str)
+        ));
         self.value_counter += 1;
     }
 
@@ -121,28 +154,47 @@ impl Output {
         self.value_counter = 0;
     }
 
-    fn prefix(&self) -> Cow<str> {
-        if !self.opts.numbers {
-            return Cow::Borrowed(EMPTY_PREFIX);
-        }
-
-        let prefix = if self.opts.numbers {
-            format!("{:>5}  ", STYLE_VALUE_COUNT.paint(self.value_counter))
-        } else {
-            String::new()
-        };
-
-        Cow::Owned(prefix)
-    }
-
-    fn println<T: Display>(&mut self, style: Style, path: &str, value: T) {
-        let prefix = self.prefix();
-        println!(
-            "{prefix}{path}: {value}",
+    fn writeln<T: Display>(&mut self, style: Style, path: &str, value: T) {
+        let prefix = prefix(self.opts.numbers, self.value_counter);
+        let _ = self.inner.write_fmt(format_args!(
+            "{prefix}{path}: {value}\n",
             prefix = prefix,
             path = path,
             value = style.paint(value)
-        );
+        ));
         self.value_counter += 1;
+    }
+}
+
+fn prefix(numbers: bool, value_counter: usize) -> Cow<'static, str> {
+    if !numbers {
+        return Cow::Borrowed(EMPTY_PREFIX);
+    }
+
+    let prefix = if numbers {
+        format!("{:>5}  ", STYLE_VALUE_COUNT.paint(value_counter))
+    } else {
+        String::new()
+    };
+
+    Cow::Owned(prefix)
+}
+
+impl Debug for OutputWriter {
+    fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
+        f.write_fmt(format_args!(
+            "OutputWriter(opts={:?}, value_counter={:?})",
+            self.opts, self.value_counter
+        ))
+    }
+}
+
+impl TryFrom<Output> for OutputWriter {
+    type Error = crate::error::Error;
+
+    fn try_from(value: Output) -> std::result::Result<Self, Self::Error> {
+        match value {
+            Output::Write(inner, opts) => Ok(OutputWriter::from_writer(inner, opts)),
+        }
     }
 }

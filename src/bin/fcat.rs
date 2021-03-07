@@ -6,8 +6,9 @@
 // copied, modified, or distributed except according to those terms.
 
 use anyhow::{Context, Result};
-use flatcat::{cli_parser::Opts, FlatCat, FlatCatOpts, Format, FormatHint, Input, Output, OutputOpts};
-use std::io;
+use flatcat::cli_parser::Opts;
+use flatcat::output::Output;
+use flatcat::{FlatCat, FlatCatOpts, Format, FormatHint, Input, OutputOpts};
 use std::str::FromStr;
 use structopt::StructOpt;
 
@@ -19,14 +20,14 @@ fn main() -> Result<()> {
         .with_null(!opts.no_null)
         .with_quotes(!opts.no_quotes)
         .with_numbers(opts.numbers);
-    let output = Output::new(output_opts);
+    let output = Output::from_stdout(output_opts);
 
     let flatcat_opts = FlatCatOpts::new().with_plain(!opts.no_plain);
-    let mut flatcat = FlatCat::new(flatcat_opts, output);
+    let mut flatcat = FlatCat::new(flatcat_opts, output).context("failed to instantiate FlatCat")?;
 
     for file in opts.files {
         let mut input = if file == "-" {
-            Input::from_read(io::stdin())
+            Input::from_stdout()
         } else {
             Input::from_path(file)
         };

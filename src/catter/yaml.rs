@@ -10,7 +10,7 @@ use std::io::Read;
 use serde_yaml::{from_reader, Value};
 
 use crate::catter::Catter;
-use crate::output::Output;
+use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
 #[derive(Debug, Clone)]
@@ -38,11 +38,11 @@ impl From<FlatCatOpts> for YamlCatterOpts {
 pub struct YamlCatter<'a> {
     #[allow(dead_code)]
     opts: YamlCatterOpts,
-    output: &'a mut Output,
+    output: &'a mut OutputWriter,
 }
 
 impl<'a> YamlCatter<'a> {
-    pub fn new(opts: YamlCatterOpts, output: &mut Output) -> YamlCatter {
+    pub fn new(opts: YamlCatterOpts, output: &mut OutputWriter) -> YamlCatter {
         YamlCatter { opts, output }
     }
 

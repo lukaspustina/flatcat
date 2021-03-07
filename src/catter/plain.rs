@@ -8,7 +8,7 @@
 use std::io::{BufRead, BufReader, Read};
 
 use crate::catter::Catter;
-use crate::output::Output;
+use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
 #[derive(Debug, Clone)]
@@ -36,11 +36,11 @@ impl From<FlatCatOpts> for PlainCatterOpts {
 pub struct PlainCatter<'a> {
     #[allow(dead_code)]
     opts: PlainCatterOpts,
-    output: &'a mut Output,
+    output: &'a mut OutputWriter,
 }
 
 impl<'a> PlainCatter<'a> {
-    pub fn new(opts: PlainCatterOpts, output: &mut Output) -> PlainCatter {
+    pub fn new(opts: PlainCatterOpts, output: &mut OutputWriter) -> PlainCatter {
         PlainCatter { opts, output }
     }
 

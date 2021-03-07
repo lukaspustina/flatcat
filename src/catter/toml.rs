@@ -10,7 +10,7 @@ use std::io::Read;
 use toml::{from_slice, Value};
 
 use crate::catter::Catter;
-use crate::output::Output;
+use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
 #[derive(Debug, Clone)]
@@ -38,11 +38,11 @@ impl From<FlatCatOpts> for TomlCatterOpts {
 pub struct TomlCatter<'a> {
     #[allow(dead_code)]
     opts: TomlCatterOpts,
-    output: &'a mut Output,
+    output: &'a mut OutputWriter,
 }
 
 impl<'a> TomlCatter<'a> {
-    pub fn new(opts: TomlCatterOpts, output: &mut Output) -> TomlCatter {
+    pub fn new(opts: TomlCatterOpts, output: &mut OutputWriter) -> TomlCatter {
         TomlCatter { opts, output }
     }
 

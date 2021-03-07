@@ -9,11 +9,11 @@
  */
 
 use std::convert::TryFrom;
-use std::fmt;
 use std::fmt::{Debug, Formatter};
 use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::{Path, PathBuf};
+use std::{fmt, io};
 
 use crate::{Error, Format, FormatHint, Result};
 
@@ -28,8 +28,12 @@ impl Input {
         Input::Path(path, FormatHint::Empty)
     }
 
-    pub fn from_read<R: Read + 'static>(reader: R) -> Input {
+    pub fn from_reader<R: Read + 'static>(reader: R) -> Input {
         Input::Read(Box::new(reader), FormatHint::Empty)
+    }
+
+    pub fn from_stdout() -> Input {
+        Input::from_reader(io::stdin())
     }
 
     pub fn with_format_hint(self, hint: FormatHint) -> Self {

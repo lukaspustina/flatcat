@@ -10,7 +10,7 @@ use std::io::Read;
 use serde_json::{de::from_reader, Value};
 
 use crate::catter::Catter;
-use crate::output::Output;
+use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
 #[derive(Debug, Clone)]
@@ -38,11 +38,11 @@ impl From<FlatCatOpts> for JsonCatterOpts {
 pub struct JsonCatter<'a> {
     #[allow(dead_code)]
     opts: JsonCatterOpts,
-    output: &'a mut Output,
+    output: &'a mut OutputWriter,
 }
 
 impl<'a> JsonCatter<'a> {
-    pub fn new(opts: JsonCatterOpts, output: &mut Output) -> JsonCatter {
+    pub fn new(opts: JsonCatterOpts, output: &mut OutputWriter) -> JsonCatter {
         JsonCatter { opts, output }
     }
 

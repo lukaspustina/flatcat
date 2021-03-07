@@ -10,7 +10,9 @@ pub use error::Error;
 pub use crate::format::{Format, FormatHint};
 pub use crate::input::Input;
 use crate::input::InputReader;
+use crate::output::OutputWriter;
 pub use crate::output::{Output, OutputOpts};
+
 use std::convert::TryInto;
 
 pub mod catter;
@@ -48,12 +50,13 @@ impl Default for FlatCatOpts {
 #[derive(Debug)]
 pub struct FlatCat {
     opts: FlatCatOpts,
-    output: Output,
+    output: OutputWriter,
 }
 
 impl FlatCat {
-    pub fn new(opts: FlatCatOpts, output: Output) -> FlatCat {
-        FlatCat { opts, output }
+    pub fn new(opts: FlatCatOpts, output: Output) -> Result<FlatCat> {
+        let output = output.try_into()?;
+        Ok(FlatCat { opts, output })
     }
 
     pub fn cat(&mut self, input: Input) -> Result<()> {
