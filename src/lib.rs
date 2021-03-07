@@ -7,6 +7,7 @@
 
 pub use error::Error;
 
+pub use crate::format::{Format, FormatHint};
 pub use crate::input::Input;
 use crate::input::InputReader;
 pub use crate::output::{Output, OutputOpts};
@@ -15,16 +16,11 @@ use std::convert::TryInto;
 pub mod catter;
 pub mod error;
 pub mod file_extension;
+pub mod format;
 pub mod input;
 pub mod output;
 
 pub type Result<T> = std::result::Result<T, error::Error>;
-
-#[derive(Debug, Copy, Clone, PartialEq)]
-pub enum Format {
-    Json,
-    Unknown,
-}
 
 #[derive(Debug, Clone)]
 pub struct FlatCatOpts {}
@@ -55,14 +51,15 @@ impl FlatCat {
     pub fn cat(&self, input: Input) -> Result<()> {
         use crate::catter::Catter;
 
-        match input.format() {
+        let format = input.format()?;
+        let mut reader: InputReader = input.try_into()?;
+
+        match format {
             Format::Json => {
                 let opts = self.opts.clone().into();
                 let catter = catter::json::JsonCatter::new(opts, &self.output);
-                let mut reader: InputReader = input.try_into()?;
                 catter.cat(&mut reader)
             }
-            Format::Unknown => Err(Error::UnknownFormatError {}),
         }
     }
 }

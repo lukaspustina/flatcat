@@ -13,26 +13,29 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 use std::path::{Path, PathBuf};
 
-use crate::file_extension::FileExtension;
-use crate::Format;
+use crate::{Format, FormatHint, Result};
 
 #[derive(Debug)]
 pub enum Input {
-    Path(PathBuf),
+    Path(PathBuf, FormatHint),
 }
 
 impl Input {
     pub fn from_path<P: AsRef<Path>>(path: P) -> Self {
         let path = path.as_ref().to_path_buf();
-        Input::Path(path)
+        Input::Path(path, FormatHint::Empty)
     }
 
-    pub fn format(&self) -> Format {
+    pub fn with_format_hint(self, hint: FormatHint) -> Self {
         match self {
-            Input::Path(p) => p
-                .extension()
-                .map(|ext| FileExtension::format(ext))
-                .unwrap_or(Format::Unknown),
+            Input::Path(path, _) => Input::Path(path, hint),
+        }
+    }
+
+    pub fn format(&self) -> Result<Format> {
+        match self {
+            Input::Path(_, FormatHint::Hint(format)) => Ok(*format),
+            Input::Path(p, FormatHint::Empty) => Format::guess_from_file_extension(p),
         }
     }
 }
@@ -52,8 +55,8 @@ impl TryFrom<Input> for InputReader {
 
     fn try_from(value: Input) -> std::result::Result<Self, Self::Error> {
         match value {
-            Input::Path(p) => {
-                let file = File::open(p).expect("Failed to open file");
+            Input::Path(p, _) => {
+                let file = File::open(p)?;
                 let buf_reader = BufReader::new(file);
                 Ok(InputReader {
                     inner: Box::new(buf_reader),

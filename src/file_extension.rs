@@ -8,39 +8,37 @@
  *
  */
 
-use crate::Format;
 use std::ffi::OsStr;
+
+use crate::{Error, Format, Result};
 
 pub struct FileExtension {}
 
 impl FileExtension {
-    pub fn format(ext: &OsStr) -> Format {
-        match ext.to_str() {
-            Some(ext) => str_ext_to_format(ext),
-            _ => Format::Unknown,
+    pub fn guess_format(ext: &OsStr) -> Result<Format> {
+        let str = ext.to_string_lossy();
+        match str.as_ref() {
+            "json" => Ok(Format::Json),
+            _ => Err(Error::UnknownFormatExtError { ext: str.into_owned() }),
         }
-    }
-}
-
-fn str_ext_to_format(ext: &str) -> Format {
-    match ext {
-        "json" => Format::Json,
-        _ => Format::Unknown,
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
-
     use spectral::prelude::*;
+
+    use super::*;
 
     #[test]
     fn json() {
         let ext = OsStr::new("json");
 
-        let format = FileExtension::format(ext);
+        let format = FileExtension::guess_format(ext);
 
-        asserting("json extension").that(&format).is_equal_to(&Format::Json);
+        asserting("json extension")
+            .that(&format)
+            .is_ok()
+            .is_equal_to(&Format::Json);
     }
 }

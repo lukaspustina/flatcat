@@ -12,8 +12,15 @@ use thiserror::Error;
 ///
 /// Must be `Send` because it used by async function which might run on different threads.
 pub enum Error {
-    #[error("failed to identify input format")]
-    UnknownFormatError {},
+    #[error("failed to identify input format because {msg}")]
+    UnknownFormatError { msg: &'static str },
+    #[error("failed to identify input format of file with extension '{ext}'")]
+    UnknownFormatExtError { ext: String },
+    #[error("failed to execute IO operation for")]
+    IoError {
+        #[from]
+        source: std::io::Error,
+    },
     #[error("failed to deserialize to JSON")]
     JsonError {
         #[from]

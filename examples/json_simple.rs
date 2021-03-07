@@ -8,8 +8,7 @@
 use flatcat::{FlatCat, Input, Output, OutputOpts};
 
 fn main() {
-    //let file = File::open("tests/files/mhost.lookup.pustina_de.json")
-
+    // let input = Input::from_path("tests/files/mhost.lookup.pustina_de.json");
     let input = Input::from_path("tests/files/simple.json");
 
     let opts = OutputOpts::new().with_color(true);
