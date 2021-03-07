@@ -3,7 +3,7 @@ name = "flatcat"
 version = "0.0.1"
 authors = ["Lukas Pustina <lukas@pustina.de>"]
 edition = "2018"
-description = "Flatten nested file formats like json, toml, yaml into single lines with full path to all values."
+description = "Flatten nested file formats like JSON, TOML, YAML into single lines with full path to all values."
 repository = "https://github.com/lukaspustina/flatcat.git"
 homepage = "https://fcat.pustina.de"
 readme = "README.md"
@@ -52,8 +52,12 @@ overflow-checks = true
 panic = "abort"
 
 [package.metadata.deb]
-extended-description = """fcat
-Flatten nested file formats like json, toml, yaml into single lines with full path to all values.
+extended-description = """flatcat
+Flatten nested file formats like JSON, TOML, YAML into single lines with full path to all values.
+- Supports JSON, TOML, YAML, and more format are coming.
+- Support colorful output to ease readability
+- Allows to ignore `Null` values
+- Unrecognized file formats are printed as they are plainly
 """
 section = "Utilities"
 priority = "optional"
@@ -63,7 +67,7 @@ assets = [
 ]
 
 [package.metadata.rpm]
-package = "fcat"
+package = "flatcat"
 
 [package.metadata.rpm.cargo]
 buildflags = ["--release"]

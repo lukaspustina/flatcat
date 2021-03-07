@@ -1,10 +1,10 @@
-class Mhost < Formula
-  desc "Flatten nested file formats like json, toml, yaml into single lines with full path to all values."
-  url "https://github.com/lukaspustina/fcat/archive/v0.0.1.tar.gz"
-  homepage "https://fcat.pustina.de"
+class Flatcat < Formula
+  desc "Flatten nested file formats like JSON, TOML, YAML into single lines with full path to all values."
+  url "https://github.com/lukaspustina/flatcat/archive/v0.0.1.tar.gz"
+  homepage "https://flatcat.pustina.de"
   sha256 ""
   license any_of: ["MIT", "Apache-2.0"]
-  head "https://github.com/lukaspustina/fcat.git"
+  head "https://github.com/lukaspustina/flatcat.git"
 
   depends_on "rust" => :build
 

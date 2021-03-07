@@ -63,7 +63,7 @@ jobs:
         run: |
           export DEB_PKG_VERSION=$(echo ${{ github.ref }} | sed 's|^refs/tags/v||')
           export DEB_PKG_VERSION=$(cargo read-manifest | jq -r .version | sed 's/-/~/')
-          echo ::set-output name=filename::fcat_${DEB_PKG_VERSION}_amd64.deb
+          echo ::set-output name=filename::flatcat_${DEB_PKG_VERSION}_amd64.deb
       - name: Upload Debian Package
         uses: actions/upload-release-asset@v1
         env:
@@ -115,7 +115,7 @@ jobs:
           context: distribution/docker
           push: true
           tags: |
-            lukaspustina/fcat:${{ steps.docker_info.outputs.tag }}
-            lukaspustina/fcat:latest
+            lukaspustina/flatcat:${{ steps.docker_info.outputs.tag }}
+            lukaspustina/flatcat:latest
           build-args: |
             RELEASE_TAG=${{ steps.docker_info.outputs.tag }}
