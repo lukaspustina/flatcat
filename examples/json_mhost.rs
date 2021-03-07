@@ -5,21 +5,18 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
-use flatcat::output::{Output, OutputOpts};
-use flatcat::{FlatCat, FlatCatOpts, Format};
-use std::fs::File;
-use std::io::BufReader;
+use flatcat::{FlatCat, Input, Output, OutputOpts};
 
 fn main() {
     //let file = File::open("tests/files/mhost.lookup.pustina_de.json")
-    let file = File::open("tests/files/simple.json").expect("Failed to open file");
-    let mut buf_reader = BufReader::new(file);
+
+    let input = Input::from_path("tests/files/simple.json");
 
     let opts = OutputOpts::new().with_color(true);
     let output = Output::new(opts);
 
-    let opts = FlatCatOpts::new(Format::Json);
+    let opts = Default::default();
     let flat_cat = FlatCat::new(opts, output);
 
-    flat_cat.cat(&mut buf_reader).expect("Failed to cat file");
+    flat_cat.cat(input).expect("Failed to cat file");
 }

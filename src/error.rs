@@ -12,8 +12,10 @@ use thiserror::Error;
 ///
 /// Must be `Send` because it used by async function which might run on different threads.
 pub enum Error {
+    #[error("failed to identify input format")]
+    UnknownFormatError {},
     #[error("failed to deserialize to JSON")]
-    DerserJsonError {
+    JsonError {
         #[from]
         source: serde_json::Error,
     },

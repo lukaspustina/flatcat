@@ -5,30 +5,39 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
-use std::io::Read;
-
-use crate::output::Output;
 pub use error::Error;
+
+pub use crate::input::Input;
+use crate::input::InputReader;
+pub use crate::output::{Output, OutputOpts};
+use std::convert::TryInto;
 
 pub mod catter;
 pub mod error;
+pub mod file_extension;
+pub mod input;
 pub mod output;
 
 pub type Result<T> = std::result::Result<T, error::Error>;
 
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Copy, Clone, PartialEq)]
 pub enum Format {
     Json,
+    Unknown,
 }
 
 #[derive(Debug, Clone)]
-pub struct FlatCatOpts {
-    format: Format,
-}
+pub struct FlatCatOpts {}
 
 impl FlatCatOpts {
-    pub fn new(format: Format) -> FlatCatOpts {
-        FlatCatOpts { format }
+    pub fn new() -> FlatCatOpts {
+        Default::default()
+    }
+}
+
+impl Default for FlatCatOpts {
+    fn default() -> Self {
+        FlatCatOpts {}
     }
 }
 
@@ -43,15 +52,17 @@ impl FlatCat {
         FlatCat { opts, output }
     }
 
-    pub fn cat<R: Read>(&self, read: &mut R) -> Result<()> {
+    pub fn cat(&self, input: Input) -> Result<()> {
         use crate::catter::Catter;
 
-        match self.opts.format {
+        match input.format() {
             Format::Json => {
                 let opts = self.opts.clone().into();
                 let catter = catter::json::JsonCatter::new(opts, &self.output);
-                catter.cat(read)
+                let mut reader: InputReader = input.try_into()?;
+                catter.cat(&mut reader)
             }
+            Format::Unknown => Err(Error::UnknownFormatError {}),
         }
     }
 }
