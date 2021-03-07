@@ -3,12 +3,26 @@ name = "flatcat"
 version = "0.0.1"
 authors = ["Lukas Pustina <lukas@pustina.de>"]
 edition = "2018"
-description = "Flatten nested formats into single lines with full path"
+description = "Flatten nested file formats like json, toml, yaml into single lines with full path to all values."
+repository = "https://github.com/lukaspustina/flatcat.git"
+homepage = "https://fcat.pustina.de"
+readme = "README.md"
+license = "MIT/Apache-2.0"
+categories = ["command-line-utilities"]
+keywords = ["cat", "file", "parse", "cli"]
+include = [
+    "README.md",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "CHANGELOG.md",
+    "**/*.rs",
+    "Cargo.toml",
+]
+build = "build.rs"
 
 [[bin]]
 name = "fcat"
 path = "src/bin/fcat.rs"
-doc = false
 
 [lib]
 name = "flatcat"
@@ -25,6 +39,9 @@ thiserror = "1.0"
 toml = { version = "0.5", features = ["preserve_order"] }
 yansi = "0.5"
 
+[build-dependencies]
+structopt = "0.3"
+
 [dev-dependencies]
 lit = "1"
 spectral = "0.6"
@@ -33,3 +50,23 @@ spectral = "0.6"
 lto = true
 overflow-checks = true
 panic = "abort"
+
+[package.metadata.deb]
+extended-description = """fcat
+Flatten nested file formats like json, toml, yaml into single lines with full path to all values.
+"""
+section = "Utilities"
+priority = "optional"
+assets = [
+    ["target/release/fcat", "usr/bin/", "755"],
+    ["README.md", "usr/share/doc/mhost/README", "644"],
+]
+
+[package.metadata.rpm]
+package = "fcat"
+
+[package.metadata.rpm.cargo]
+buildflags = ["--release"]
+
+[package.metadata.rpm.targets]
+mhost = { path = "/usr/bin/fcat" }

@@ -14,6 +14,7 @@ pub use crate::output::{Output, OutputOpts};
 use std::convert::TryInto;
 
 pub mod catter;
+pub mod cli_parser;
 pub mod error;
 pub mod file_extension;
 pub mod format;

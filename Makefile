@@ -32,6 +32,21 @@ fmt:
 	cargo fmt
 
 
+prepare-release: docs
+
+docs:
+	doctoc README.md && git add README.md
+
+
+deb:
+	cargo deb
+
+rpm:
+	cargo rpm build
+
+release: test prepare-release build-release deb rpm
+
+
 install:
 	cargo install --all-features --path .
 
@@ -43,3 +58,8 @@ init:
 
 _rustup:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+
+_cargo:
+	cargo install cargo-deb
+	cargo install cargo-rpm
+

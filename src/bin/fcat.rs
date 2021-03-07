@@ -10,36 +10,8 @@ use flatcat::{FlatCat, Format, FormatHint, Input, Output, OutputOpts};
 use std::str::FromStr;
 use structopt::StructOpt;
 
-#[derive(Debug, StructOpt)]
-#[structopt(
-    name = "fcat",
-    author = env!("CARGO_PKG_AUTHORS"),
-    about = env!("CARGO_PKG_DESCRIPTION"),
-    global_setting(structopt::clap::AppSettings::UnifiedHelpMessage),
-)]
-struct Opts {
-    /// Files to flatten and print
-    #[structopt(name = "FILE")]
-    files: Vec<String>,
-    /// Disables colorful output
-    #[structopt(long = "no-color")]
-    no_color: bool,
-    /// Ignores null values, if applicable for file type
-    #[structopt(long = "no-null")]
-    no_null: bool,
-    /// Disables quoting ("text") strings
-    #[structopt(long = "no-quotes")]
-    no_quotes: bool,
-    /// Numbers the output values, starting at 1
-    #[structopt(long = "value-counter")]
-    value_counter: bool,
-    /// Sets file type instead of guessing
-    #[structopt(name = "TYPE", short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]), validator(| str | Format::from_str(& str).map(| _ | ()).map_err(| _ | "invalid file type".to_string())))]
-    format: Option<Format>,
-}
-
 fn main() -> Result<()> {
-    let opts = Opts::from_args();
+    let opts = flatcat::cli_parser::Opts::from_args();
 
     let output_opts = OutputOpts::new()
         .with_color(!opts.no_color)
@@ -52,9 +24,10 @@ fn main() -> Result<()> {
     for file in opts.files {
         let mut input = Input::from_path(file);
         if let Some(ref format) = opts.format {
-            input = input.with_format_hint(FormatHint::hint(*format));
+            let format = Format::from_str(format).context("failed to parse format option")?;
+            input = input.with_format_hint(FormatHint::hint(format));
         }
-        flat_cat.cat(input).context("Failed to cat file")?;
+        flat_cat.cat(input).context("failed to cat file")?;
     }
 
     Ok(())
