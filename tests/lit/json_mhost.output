@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --value-counter tests/files/mhost.lookup.pustina_de.json
+RUN: @fcat_bin --no-color --value-numbers tests/files/mhost.lookup.pustina_de.json
 
 CHECK: 1  .info.start_time: "2021-03-06T20:03:40.769091Z"
 CHECK-NEXT: 2  .info.command_line: "-q -p -o json l --all pustina.de"

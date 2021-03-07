@@ -34,8 +34,8 @@ pub struct Opts {
     #[structopt(long = "no-quotes")]
     pub no_quotes: bool,
     /// Numbers the output values, starting at 1
-    #[structopt(long = "value-counter")]
-    pub value_counter: bool,
+    #[structopt(long = "value-numbers")]
+    pub value_numbers: bool,
     /// Sets file type instead of guessing
     #[structopt(name = "TYPE", short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]))]
     pub format: Option<String>,

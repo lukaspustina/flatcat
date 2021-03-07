@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --value-counter Cargo.toml
+RUN: @fcat_bin --no-color --value-numbers Cargo.toml
 
 CHECK: 1  .package.name: "flatcat"
 CHECK-NEXT: 2  .package.version:

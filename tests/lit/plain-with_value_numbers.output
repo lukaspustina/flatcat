@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --value-counter Makefile
+RUN: @fcat_bin --no-color --value-numbers Makefile
 
 CHECK: 1  all: check build test
 CHECK-NEXT: 2
