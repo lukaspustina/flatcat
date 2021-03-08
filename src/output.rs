@@ -13,7 +13,7 @@ use std::io::Write;
 use std::{fmt, io};
 use yansi::{Color, Style};
 
-static EMPTY_PREFIX: &str = "";
+static EMPTY_STR: &str = "";
 lazy_static! {
     static ref STYLE_ARRAY: Style = Style::new(Color::Green);
     static ref STYLE_BOOL: Style = Style::new(Color::Red);
@@ -31,6 +31,7 @@ pub struct OutputOpts {
     null: bool,
     quotes: bool,
     numbers: bool,
+    end_of_line: bool,
 }
 
 impl Default for OutputOpts {
@@ -40,6 +41,7 @@ impl Default for OutputOpts {
             null: true,
             quotes: true,
             numbers: false,
+            end_of_line: false,
         }
     }
 }
@@ -63,6 +65,10 @@ impl OutputOpts {
 
     pub fn with_numbers(self, numbers: bool) -> Self {
         OutputOpts { numbers, ..self }
+    }
+
+    pub fn with_end_of_lines(self, end_of_line: bool) -> Self {
+        OutputOpts { end_of_line, ..self }
     }
 }
 
@@ -144,10 +150,12 @@ impl OutputWriter {
 
     pub fn plain<T: Display>(&mut self, str: T) {
         let prefix = prefix(self.opts.numbers, self.value_counter);
+        let suffix = suffix(self.opts.end_of_line);
         let _ = self.inner.write_fmt(format_args!(
-            "{prefix}{str}\n",
+            "{prefix}{str}{suffix}\n",
             prefix = prefix,
-            str = STYLE_PLAIN.paint(str)
+            str = STYLE_PLAIN.paint(str),
+            suffix = suffix,
         ));
         self.value_counter += 1;
     }
@@ -158,11 +166,13 @@ impl OutputWriter {
 
     fn writeln<T: Display>(&mut self, style: Style, path: &str, value: T) {
         let prefix = prefix(self.opts.numbers, self.value_counter);
+        let suffix = suffix(self.opts.end_of_line);
         let _ = self.inner.write_fmt(format_args!(
-            "{prefix}{path}: {value}\n",
+            "{prefix}{path}: {value}{suffix}\n",
             prefix = prefix,
             path = path,
-            value = style.paint(value)
+            value = style.paint(value),
+            suffix = suffix,
         ));
         self.value_counter += 1;
     }
@@ -170,7 +180,7 @@ impl OutputWriter {
 
 fn prefix(numbers: bool, value_counter: usize) -> Cow<'static, str> {
     if !numbers {
-        return Cow::Borrowed(EMPTY_PREFIX);
+        return Cow::Borrowed(EMPTY_STR);
     }
 
     let prefix = if numbers {
@@ -180,6 +190,14 @@ fn prefix(numbers: bool, value_counter: usize) -> Cow<'static, str> {
     };
 
     Cow::Owned(prefix)
+}
+
+fn suffix(end_of_line: bool) -> Cow<'static, str> {
+    if end_of_line {
+        Cow::Borrowed("$")
+    } else {
+        Cow::Borrowed(EMPTY_STR)
+    }
 }
 
 impl Debug for OutputWriter {

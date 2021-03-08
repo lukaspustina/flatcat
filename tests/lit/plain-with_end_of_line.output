@@ -1,0 +1,10 @@
+RUN: @fcat_bin --no-color --line-end tests/files/text.md
+
+CHECK: # Text$
+CHECK-NEXT: $
+CHECK-NEXT: This is a markdown file.$
+CHECK-NEXT: $
+CHECK-NEXT: This line has two trailing spaces to encode a line break.  $
+CHECK-NEXT: Yes, a line break.$
+CHECK-NEXT: $
+CHECK-NEXT: This is paragraph with.$

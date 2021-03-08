@@ -36,6 +36,9 @@ pub struct Opts {
     /// Numbers the output values, starting at 1
     #[structopt(short = "n", long = "numbers")]
     pub numbers: bool,
+    /// Displays a dollar sign ('$') at the end of each line
+    #[structopt(short = "e", long = "line-end")]
+    pub end_of_line: bool,
     /// Sets file type instead of guessing
     #[structopt(name = "TYPE", short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]))]
     pub format: Option<String>,

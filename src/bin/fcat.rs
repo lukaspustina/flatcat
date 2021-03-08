@@ -21,7 +21,8 @@ fn main() -> Result<()> {
         .with_color(!opts.no_color)
         .with_null(!opts.no_null)
         .with_quotes(!opts.no_quotes)
-        .with_numbers(opts.numbers);
+        .with_numbers(opts.numbers)
+        .with_end_of_lines(opts.end_of_line);
     let output = Output::from_stdout(output_opts);
 
     let flatcat_opts = FlatCatOpts::new().with_flatten(opts.flatten);
