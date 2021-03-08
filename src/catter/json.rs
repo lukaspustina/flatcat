@@ -9,7 +9,7 @@ use std::io::Read;
 
 use serde_json::{de::from_reader, Value};
 
-use crate::catter::Catter;
+use crate::catter::{Catter, KeyPath};
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
@@ -47,31 +47,30 @@ impl<'a> JsonCatter<'a> {
     }
 
     fn json(&mut self, json: Value) -> Result<()> {
-        let mut path = String::new();
+        let mut path = KeyPath::new();
 
         self.do_json(&mut path, json)
     }
 
-    fn do_json(&mut self, path: &mut String, json: Value) -> Result<()> {
+    fn do_json(&mut self, path: &mut KeyPath, json: Value) -> Result<()> {
         match json {
-            Value::Null => self.output.null(&path),
-            Value::Bool(x) => self.output.bool(&path, &x),
-            Value::Number(x) => self.output.number(&path, &x),
-            Value::String(x) => self.output.string(&path, &x),
+            Value::Null => self.output.null(&path.to_string()),
+            Value::Bool(x) => self.output.bool(&path.path(), &x),
+            Value::Number(x) => self.output.number(&path.path(), &x),
+            Value::String(x) => self.output.string(&path.path(), &x),
             Value::Array(x) => {
                 for (i, value) in x.into_iter().enumerate() {
                     let key = self.output.array(i);
-                    path.push_str(&key);
+                    path.push_no_sep(&key);
                     self.do_json(path, value)?;
-                    path.truncate(path.len() - key.len());
+                    path.pop();
                 }
             }
             Value::Object(x) => {
                 for (key, value) in x {
-                    let key = format!(".{}", key);
-                    path.push_str(&key);
+                    path.push(&key);
                     self.do_json(path, value)?;
-                    path.truncate(path.len() - key.len());
+                    path.pop();
                 }
             }
         }

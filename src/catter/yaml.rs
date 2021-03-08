@@ -9,7 +9,7 @@ use std::io::Read;
 
 use serde_yaml::{from_reader, Value};
 
-use crate::catter::Catter;
+use crate::catter::{Catter, KeyPath};
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
@@ -47,32 +47,30 @@ impl<'a> YamlCatter<'a> {
     }
 
     fn yaml(&mut self, yaml: Value) -> Result<()> {
-        let mut path = String::new();
+        let mut path = KeyPath::new();
 
         self.do_yaml(&mut path, yaml)
     }
 
-    fn do_yaml(&mut self, path: &mut String, yaml: Value) -> Result<()> {
+    fn do_yaml(&mut self, path: &mut KeyPath, yaml: Value) -> Result<()> {
         match yaml {
-            Value::Null => self.output.null(&path),
-            Value::Bool(x) => self.output.bool(&path, &x),
-            Value::Number(x) => self.output.number(&path, &x),
-            Value::String(x) => self.output.string(&path, &x),
+            Value::Null => self.output.null(&path.path()),
+            Value::Bool(x) => self.output.bool(&path.path(), &x),
+            Value::Number(x) => self.output.number(&path.path(), &x),
+            Value::String(x) => self.output.string(&path.path(), &x),
             Value::Sequence(x) => {
                 for (i, value) in x.into_iter().enumerate() {
                     let key = self.output.array(i);
-                    path.push_str(&key);
+                    path.push_no_sep(&key);
                     self.do_yaml(path, value)?;
-                    path.truncate(path.len() - key.len());
+                    path.pop()
                 }
             }
             Value::Mapping(x) => {
                 for (key, value) in x {
-                    // TODO: value is not a string?!
-                    let key = format!(".{}", key.as_str().unwrap());
-                    path.push_str(&key);
+                    path.push(&key.as_str().unwrap());
                     self.do_yaml(path, value)?;
-                    path.truncate(path.len() - key.len());
+                    path.pop();
                 }
             }
         }
