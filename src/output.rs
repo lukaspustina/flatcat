@@ -68,6 +68,7 @@ impl OutputOpts {
 
 pub enum Output {
     Write(Box<dyn Write>, OutputOpts),
+    StdOut(OutputOpts),
 }
 
 impl Output {
@@ -76,7 +77,7 @@ impl Output {
     }
 
     pub fn from_stdout(opts: OutputOpts) -> Self {
-        Output::from_writer(io::stdout(), opts)
+        Output::StdOut(opts)
     }
 }
 
@@ -84,6 +85,7 @@ impl Debug for Output {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match self {
             Output::Write(_, opts) => f.write_fmt(format_args!("Output::Write(opts={:?})", opts)),
+            Output::StdOut(opts) => f.write_fmt(format_args!("Output::StdOut(opts={:?})", opts)),
         }
     }
 }
@@ -195,6 +197,7 @@ impl TryFrom<Output> for OutputWriter {
     fn try_from(value: Output) -> std::result::Result<Self, Self::Error> {
         match value {
             Output::Write(inner, opts) => Ok(OutputWriter::from_writer(inner, opts)),
+            Output::StdOut(opts) => Ok(OutputWriter::from_writer(Box::new(io::stdout()), opts)),
         }
     }
 }

@@ -27,7 +27,7 @@ fn main() -> Result<()> {
 
     for file in opts.files {
         let mut input = if file == "-" {
-            Input::from_stdout()
+            Input::from_stdin()
         } else {
             Input::from_path(file)
         };

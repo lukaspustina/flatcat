@@ -20,6 +20,7 @@ use crate::{Error, Format, FormatHint, Result};
 pub enum Input {
     Path(PathBuf, FormatHint),
     Read(Box<dyn Read>, FormatHint),
+    StdIn(FormatHint),
 }
 
 impl Input {
@@ -32,14 +33,15 @@ impl Input {
         Input::Read(Box::new(reader), FormatHint::Empty)
     }
 
-    pub fn from_stdout() -> Input {
-        Input::from_reader(io::stdin())
+    pub fn from_stdin() -> Input {
+        Input::StdIn(FormatHint::Empty)
     }
 
     pub fn with_format_hint(self, hint: FormatHint) -> Self {
         match self {
             Input::Path(path, _) => Input::Path(path, hint),
             Input::Read(reader, _) => Input::Read(reader, hint),
+            Input::StdIn(_) => Input::StdIn(hint),
         }
     }
 
@@ -51,6 +53,10 @@ impl Input {
             Input::Read(_, FormatHint::Empty) => Err(Error::UnknownFormatError {
                 msg: "cannot determine format from stream",
             }),
+            Input::StdIn(FormatHint::Hint(format)) => Ok(*format),
+            Input::StdIn(FormatHint::Empty) => Err(Error::UnknownFormatError {
+                msg: "cannot determine format from stdin",
+            }),
         }
     }
 }
@@ -60,6 +66,7 @@ impl Debug for Input {
         match self {
             Input::Path(path, hint) => f.write_fmt(format_args!("Input::Path(path={:?}, hint={:?})", path, hint)),
             Input::Read(_, hint) => f.write_fmt(format_args!("Input::Read(hint={:?})", hint)),
+            Input::StdIn(hint) => f.write_fmt(format_args!("Input::StdIn(hint={:?})", hint)),
         }
     }
 }
@@ -87,6 +94,13 @@ impl TryFrom<Input> for InputReader {
                 })
             }
             Input::Read(inner, _) => Ok(InputReader { inner }),
+            Input::StdIn(_) => {
+                let stdin = io::stdin();
+                let buf_reader = BufReader::new(stdin);
+                Ok(InputReader {
+                    inner: Box::new(buf_reader),
+                })
+            }
         }
     }
 }
