@@ -42,4 +42,7 @@ pub struct Opts {
     /// Sets file type instead of guessing
     #[structopt(name = "TYPE", short = "t", long = "type", possible_values(& ["json", "toml", "yaml"]))]
     pub format: Option<String>,
+    /// Lists known file types / extensions for supported formats
+    #[structopt(long = "type-list")]
+    pub type_list: bool,
 }

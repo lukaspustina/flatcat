@@ -11,11 +11,17 @@ use anyhow::{Context, Result};
 use structopt::StructOpt;
 
 use flatcat::cli_parser::Opts;
+use flatcat::file_extension::FILE_EXTENSION_LIST;
 use flatcat::output::Output;
 use flatcat::{FlatCat, FlatCatOpts, Format, FormatHint, Input, OutputOpts};
 
 fn main() -> Result<()> {
     let opts = Opts::from_args();
+
+    if opts.type_list {
+        print_type_list();
+        return Ok(());
+    }
 
     let output_opts = OutputOpts::new()
         .with_color(!opts.no_color)
@@ -31,6 +37,12 @@ fn main() -> Result<()> {
     cats(&opts, &mut flatcat).context("failed to cat file")?;
 
     Ok(())
+}
+
+fn print_type_list() {
+    for (typ, extensions) in FILE_EXTENSION_LIST {
+        println!("{}: {}", typ, extensions);
+    }
 }
 
 /// Cat all given files; if non given, read from stdin

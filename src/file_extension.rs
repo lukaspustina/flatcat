@@ -12,6 +12,8 @@ use std::ffi::OsStr;
 
 use crate::{Error, Format, Result};
 
+pub static FILE_EXTENSION_LIST: &[(&str, &str)] = &[("json", "*.json"), ("toml", "*.toml"), ("yaml", "*.yaml, *.yml")];
+
 pub struct FileExtension {}
 
 impl FileExtension {
