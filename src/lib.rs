@@ -67,23 +67,19 @@ impl FlatCat {
 
         match format {
             Ok(Format::Json) => {
-                let opts = self.opts.clone().into();
-                let mut catter = catter::JsonCatter::new(opts, &mut self.output);
+                let mut catter = catter::JsonCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Ok(Format::Toml) => {
-                let opts = self.opts.clone().into();
-                let mut catter = catter::TomlCatter::new(opts, &mut self.output);
+                let mut catter = catter::TomlCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Ok(Format::Yaml) => {
-                let opts = self.opts.clone().into();
-                let mut catter = catter::YamlCatter::new(opts, &mut self.output);
+                let mut catter = catter::YamlCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Err(_) if self.opts.cat_plain => {
-                let opts = self.opts.clone().into();
-                let mut catter = catter::PlainCatter::new(opts, &mut self.output);
+                let mut catter = catter::PlainCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
             Err(err) => Err(err),

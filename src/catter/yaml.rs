@@ -13,36 +13,15 @@ use crate::catter::{Catter, KeyPath};
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
-#[derive(Debug, Clone)]
-pub struct YamlCatterOpts {}
-
-impl YamlCatterOpts {
-    pub fn new() -> YamlCatterOpts {
-        YamlCatterOpts {}
-    }
-}
-
-impl Default for YamlCatterOpts {
-    fn default() -> Self {
-        YamlCatterOpts {}
-    }
-}
-
-impl From<FlatCatOpts> for YamlCatterOpts {
-    fn from(_: FlatCatOpts) -> Self {
-        YamlCatterOpts {}
-    }
-}
-
 #[derive(Debug)]
 pub struct YamlCatter<'a> {
     #[allow(dead_code)]
-    opts: YamlCatterOpts,
+    opts: &'a FlatCatOpts,
     output: &'a mut OutputWriter,
 }
 
 impl<'a> YamlCatter<'a> {
-    pub fn new(opts: YamlCatterOpts, output: &mut OutputWriter) -> YamlCatter {
+    pub fn new<'b>(opts: &'b FlatCatOpts, output: &'b mut OutputWriter) -> YamlCatter<'b> {
         YamlCatter { opts, output }
     }
 

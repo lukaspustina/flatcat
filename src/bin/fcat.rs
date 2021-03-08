@@ -5,12 +5,14 @@
 // http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
+use std::str::FromStr;
+
 use anyhow::{Context, Result};
+use structopt::StructOpt;
+
 use flatcat::cli_parser::Opts;
 use flatcat::output::Output;
 use flatcat::{FlatCat, FlatCatOpts, Format, FormatHint, Input, OutputOpts};
-use std::str::FromStr;
-use structopt::StructOpt;
 
 fn main() -> Result<()> {
     let opts = Opts::from_args();
@@ -25,19 +27,42 @@ fn main() -> Result<()> {
     let flatcat_opts = FlatCatOpts::new().with_plain(!opts.no_plain);
     let mut flatcat = FlatCat::new(flatcat_opts, output).context("failed to instantiate FlatCat")?;
 
-    for file in opts.files {
-        let mut input = if file == "-" {
-            Input::from_stdin()
-        } else {
-            Input::from_path(file)
-        };
+    cats(&opts, &mut flatcat).context("failed to cat file")?;
 
-        if let Some(ref format) = opts.format {
-            let format = Format::from_str(format).context("failed to parse format option")?;
-            input = input.with_format_hint(FormatHint::hint(format));
+    Ok(())
+}
+
+/// Cat all given files; if non given, read from stdin
+fn cats(opts: &Opts, mut flatcat: &mut FlatCat) -> Result<()> {
+    if opts.files.is_empty() {
+        let input = create_input("-");
+        cat(opts.format.as_ref(), &mut flatcat, input)?
+    } else {
+        for file in &opts.files {
+            let input = create_input(file);
+            cat(opts.format.as_ref(), &mut flatcat, input)?
         }
-        flatcat.cat(input).context("failed to cat file")?;
     }
+
+    Ok(())
+}
+
+/// Create `Input` based on path; if single '-' use stdin
+fn create_input(path: &str) -> Input {
+    if path == "-" {
+        Input::from_stdin()
+    } else {
+        Input::from_path(path)
+    }
+}
+
+/// Cat single file
+fn cat(format: Option<&String>, flatcat: &mut FlatCat, mut input: Input) -> Result<()> {
+    if let Some(format) = format {
+        let format = Format::from_str(format).context("failed to parse format option")?;
+        input = input.with_format_hint(FormatHint::hint(format));
+    }
+    flatcat.cat(input)?;
 
     Ok(())
 }

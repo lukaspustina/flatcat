@@ -13,36 +13,15 @@ use crate::catter::{Catter, KeyPath};
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
-#[derive(Debug, Clone)]
-pub struct JsonCatterOpts {}
-
-impl JsonCatterOpts {
-    pub fn new() -> JsonCatterOpts {
-        JsonCatterOpts {}
-    }
-}
-
-impl Default for JsonCatterOpts {
-    fn default() -> Self {
-        JsonCatterOpts {}
-    }
-}
-
-impl From<FlatCatOpts> for JsonCatterOpts {
-    fn from(_: FlatCatOpts) -> Self {
-        JsonCatterOpts {}
-    }
-}
-
 #[derive(Debug)]
 pub struct JsonCatter<'a> {
     #[allow(dead_code)]
-    opts: JsonCatterOpts,
+    opts: &'a FlatCatOpts,
     output: &'a mut OutputWriter,
 }
 
 impl<'a> JsonCatter<'a> {
-    pub fn new(opts: JsonCatterOpts, output: &mut OutputWriter) -> JsonCatter {
+    pub fn new<'b>(opts: &'b FlatCatOpts, output: &'b mut OutputWriter) -> JsonCatter<'b> {
         JsonCatter { opts, output }
     }
 

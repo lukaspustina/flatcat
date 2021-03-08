@@ -11,36 +11,15 @@ use crate::catter::Catter;
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
-#[derive(Debug, Clone)]
-pub struct PlainCatterOpts {}
-
-impl PlainCatterOpts {
-    pub fn new() -> PlainCatterOpts {
-        PlainCatterOpts {}
-    }
-}
-
-impl Default for PlainCatterOpts {
-    fn default() -> Self {
-        PlainCatterOpts {}
-    }
-}
-
-impl From<FlatCatOpts> for PlainCatterOpts {
-    fn from(_: FlatCatOpts) -> Self {
-        PlainCatterOpts {}
-    }
-}
-
 #[derive(Debug)]
 pub struct PlainCatter<'a> {
     #[allow(dead_code)]
-    opts: PlainCatterOpts,
+    opts: &'a FlatCatOpts,
     output: &'a mut OutputWriter,
 }
 
 impl<'a> PlainCatter<'a> {
-    pub fn new(opts: PlainCatterOpts, output: &mut OutputWriter) -> PlainCatter {
+    pub fn new<'b>(opts: &'b FlatCatOpts, output: &'b mut OutputWriter) -> PlainCatter<'b> {
         PlainCatter { opts, output }
     }
 

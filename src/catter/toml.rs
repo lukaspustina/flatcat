@@ -13,36 +13,15 @@ use crate::catter::{Catter, KeyPath};
 use crate::output::OutputWriter;
 use crate::{FlatCatOpts, Result};
 
-#[derive(Debug, Clone)]
-pub struct TomlCatterOpts {}
-
-impl TomlCatterOpts {
-    pub fn new() -> TomlCatterOpts {
-        TomlCatterOpts {}
-    }
-}
-
-impl Default for TomlCatterOpts {
-    fn default() -> Self {
-        TomlCatterOpts {}
-    }
-}
-
-impl From<FlatCatOpts> for TomlCatterOpts {
-    fn from(_: FlatCatOpts) -> Self {
-        TomlCatterOpts {}
-    }
-}
-
 #[derive(Debug)]
 pub struct TomlCatter<'a> {
     #[allow(dead_code)]
-    opts: TomlCatterOpts,
+    opts: &'a FlatCatOpts,
     output: &'a mut OutputWriter,
 }
 
 impl<'a> TomlCatter<'a> {
-    pub fn new(opts: TomlCatterOpts, output: &mut OutputWriter) -> TomlCatter {
+    pub fn new<'b>(opts: &'b FlatCatOpts, output: &'b mut OutputWriter) -> TomlCatter<'b> {
         TomlCatter { opts, output }
     }
 
