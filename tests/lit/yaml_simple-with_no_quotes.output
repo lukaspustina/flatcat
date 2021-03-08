@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --no-quotes tests/files/simple.yaml
+RUN: @fcat_bin --no-color --flatten --no-quotes tests/files/simple.yaml
 
 CHECK: .file_type: yaml
 CHECK-NEXT: .persons[0].age: 42

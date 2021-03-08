@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --numbers Makefile
+RUN: @fcat_bin --no-color --numbers --flatten Makefile
 
 CHECK: 1  all: check build test
 CHECK-NEXT: 2

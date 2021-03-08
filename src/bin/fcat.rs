@@ -24,7 +24,7 @@ fn main() -> Result<()> {
         .with_numbers(opts.numbers);
     let output = Output::from_stdout(output_opts);
 
-    let flatcat_opts = FlatCatOpts::new().with_plain(!opts.no_plain);
+    let flatcat_opts = FlatCatOpts::new().with_flatten(opts.flatten);
     let mut flatcat = FlatCat::new(flatcat_opts, output).context("failed to instantiate FlatCat")?;
 
     cats(&opts, &mut flatcat).context("failed to cat file")?;

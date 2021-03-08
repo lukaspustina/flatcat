@@ -10,6 +10,7 @@ Of course there are similar tools like [jq](https://github.com/stedolan/jq) for 
 
 ## Features
 
+- Behaves like GNU cat unless instructed to flatten files.
 - Supports JSON, TOML, YAML, and more format are coming.
 - Supports colorful output to ease readability
 - Allows to ignore `Null` values
@@ -21,7 +22,7 @@ Of course there are similar tools like [jq](https://github.com/stedolan/jq) for 
 
 2. Run `fcat -n <file>` on any file you like. If it's a supported format, it will be flattened. ![Flatten simple YAML file](doc/images/flatten-simple-yaml-file.png)
 
-3. Set shell alias `alias cat=fcat -n` to replace your system’s `cat` command.
+3. Set shell alias `alias cat=fcat` to replace your system’s `cat` command.
 
 ## Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -64,7 +65,7 @@ persons:
 #### Flatten the YAML file.
 
 ```bash
-> fcat -n simple.yaml
+> fcat -n -f simple.yaml
     1  .persons[0].age: 42
     2  .persons[0].name.family_name: "Pustina"
     3  .persons[0].name.first_name: "Lukas"
@@ -77,7 +78,7 @@ persons:
 Now, let's try to find the path to the my first name:
 
 ```bash
-> fcat simple.yaml | grep Lukas
+> fcat -f simple.yaml | grep Lukas
 .persons[0].name.first_name: "Lukas"
 ```
 

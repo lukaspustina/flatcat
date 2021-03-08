@@ -27,9 +27,9 @@ pub struct Opts {
     /// Ignores null values, if applicable for file type
     #[structopt(long = "no-null")]
     pub no_null: bool,
-    /// Disables catting unrecognized file types as plain
-    #[structopt(long = "no-plain")]
-    pub no_plain: bool,
+    /// Flattens files with identified, hierarchically structured format
+    #[structopt(short = "f", long = "flatten")]
+    pub flatten: bool,
     /// Disables quoting ("text") strings
     #[structopt(long = "no-quotes")]
     pub no_quotes: bool,

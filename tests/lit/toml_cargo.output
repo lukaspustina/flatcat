@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --numbers Cargo.toml
+RUN: @fcat_bin --no-color --flatten --numbers Cargo.toml
 
 CHECK: 1  .package.name: "flatcat"
 CHECK-NEXT: 2  .package.version:

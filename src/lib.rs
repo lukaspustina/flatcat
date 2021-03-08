@@ -27,8 +27,8 @@ pub type Result<T> = std::result::Result<T, error::Error>;
 
 #[derive(Debug, Clone)]
 pub struct FlatCatOpts {
-    /// If set, all inputs without identified format will be printed plainly like classic `cat` would do.
-    cat_plain: bool,
+    /// If set, the flatten files with identified, hierarchically structured content
+    flatten: bool,
 }
 
 impl FlatCatOpts {
@@ -36,14 +36,14 @@ impl FlatCatOpts {
         Default::default()
     }
 
-    pub fn with_plain(self, cat_plain: bool) -> Self {
-        FlatCatOpts { cat_plain }
+    pub fn with_flatten(self, flatten: bool) -> Self {
+        FlatCatOpts { flatten }
     }
 }
 
 impl Default for FlatCatOpts {
     fn default() -> Self {
-        FlatCatOpts { cat_plain: true }
+        FlatCatOpts { flatten: true }
     }
 }
 
@@ -66,23 +66,22 @@ impl FlatCat {
         let mut reader: InputReader = input.try_into()?;
 
         match format {
-            Ok(Format::Json) => {
+            Ok(Format::Json) if self.opts.flatten => {
                 let mut catter = catter::JsonCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Ok(Format::Toml) => {
+            Ok(Format::Toml) if self.opts.flatten => {
                 let mut catter = catter::TomlCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Ok(Format::Yaml) => {
+            Ok(Format::Yaml) if self.opts.flatten => {
                 let mut catter = catter::YamlCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Err(_) if self.opts.cat_plain => {
+            Ok(_) | Err(_) => {
                 let mut catter = catter::PlainCatter::new(&self.opts, &mut self.output);
                 catter.cat(&mut reader)
             }
-            Err(err) => Err(err),
         }
     }
 }

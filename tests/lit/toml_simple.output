@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color tests/files/simple.toml
+RUN: @fcat_bin --no-color --flatten tests/files/simple.toml
 
 CHECK: .file_type: "toml"
 CHECK-NEXT: .persons[0].age: 42

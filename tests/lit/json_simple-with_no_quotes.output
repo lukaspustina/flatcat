@@ -1,4 +1,4 @@
-RUN: @fcat_bin --no-color --no-quotes tests/files/simple.json
+RUN: @fcat_bin --no-color --flatten --no-quotes tests/files/simple.json
 
 CHECK: .file_type: json
 CHECK-NEXT: .persons[0].age: 42
